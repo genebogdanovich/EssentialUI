@@ -136,7 +136,7 @@ struct SheetWithDetentsViewModifier<SwiftUIContent>: ViewModifier where SwiftUIC
 // MARK: - sheetWithDetents
 
 // Create extension on View that makes it easier to use the custom modifier.
-extension View {
+public extension View {
     func sheetWithDetents<Content>(
         isPresented: Binding<Bool>,
         detents: [UISheetPresentationController.Detent] = [.medium()],
