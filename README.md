@@ -1,2 +1,3 @@
 # EssentialUI
-A reusable UI framework.
+
+A description of this package.
