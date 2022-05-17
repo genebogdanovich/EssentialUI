@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-// MARK: - SheetPresentationForSwiftUI
-
-// Create a UISheetPresentationController that can be used in a SwiftUI interface.
+// 1 - Create a UISheetPresentationController that can be used in a SwiftUI interface
 struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: View {
+    
     @Binding var isPresented: Bool
     let onDismiss: (() -> Void)?
     let detents: [UISheetPresentationController.Detent]
     let content: Content
+    
     
     init(
         _ isPresented: Binding<Bool>,
@@ -34,17 +34,18 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
-        // Create the UIViewController that will be presented by the UIButton.
+        
+        // Create the UIViewController that will be presented by the UIButton
         let viewController = UIViewController()
         
-        // Create the UIHostingController that will embed the SwiftUI View.
+        // Create the UIHostingController that will embed the SwiftUI View
         let hostingController = UIHostingController(rootView: content)
         
-        // Add the UIHostingController to the UIViewController.
+        // Add the UIHostingController to the UIViewController
         viewController.addChild(hostingController)
         viewController.view.addSubview(hostingController.view)
         
-        // Set constraints.
+        // Set constraints
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         hostingController.view.leftAnchor.constraint(equalTo: viewController.view.leftAnchor).isActive = true
         hostingController.view.topAnchor.constraint(equalTo: viewController.view.topAnchor).isActive = true
@@ -52,20 +53,18 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
         hostingController.view.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor).isActive = true
         hostingController.didMove(toParent: viewController)
         
-        // Set the presentationController as a UISheetPresentationController.
-        
+        // Set the presentationController as a UISheetPresentationController
         if let sheetController = viewController.presentationController as? UISheetPresentationController {
             sheetController.detents = detents
-            sheetController.prefersGrabberVisible = false
+            sheetController.prefersGrabberVisible = true
             sheetController.prefersScrollingExpandsWhenScrolledToEdge = false
             sheetController.largestUndimmedDetentIdentifier = .medium
         }
         
-        /*
-         Set the coordinator (delegate)
-         We need the delegate to use the presentationControllerDidDismiss function
-         */
+        // Set the coordinator (delegate)
+        // We need the delegate to use the presentationControllerDidDismiss function
         viewController.presentationController?.delegate = context.coordinator
+        
         
         if isPresented {
             // Present the viewController
@@ -76,8 +75,8 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
         }
         
     }
-    /*
-     Creates the custom instance that you use to communicate changes
+    
+    /* Creates the custom instance that you use to communicate changes
      from your view controller to other parts of your SwiftUI interface.
      */
     func makeCoordinator() -> Coordinator {
@@ -99,24 +98,20 @@ struct SheetPresentationForSwiftUI<Content>: UIViewRepresentable where Content: 
                 onDismiss()
             }
         }
+        
     }
+    
 }
 
-// MARK: - SheetWithDetentsViewModifier
-
-// Create the SwiftUI modifier conforming to the ViewModifier protocol.
-struct SheetWithDetentsViewModifier<SwiftUIContent>: ViewModifier where SwiftUIContent: View {
+// 2 - Create the SwiftUI modifier conforming to the ViewModifier protocol
+struct sheetWithDetentsViewModifier<SwiftUIContent>: ViewModifier where SwiftUIContent: View {
+    
     @Binding var isPresented: Bool
     let onDismiss: (() -> Void)?
     let detents: [UISheetPresentationController.Detent]
     let swiftUIContent: SwiftUIContent
     
-    init(
-        isPresented: Binding<Bool>,
-        detents: [UISheetPresentationController.Detent],
-        onDismiss: (() -> Void)?,
-        content: () -> SwiftUIContent
-    ) {
+    init(isPresented: Binding<Bool>, detents: [UISheetPresentationController.Detent] = [.medium()] , onDismiss: (() -> Void)? = nil, content: () -> SwiftUIContent) {
         self._isPresented = isPresented
         self.onDismiss = onDismiss
         self.swiftUIContent = content()
@@ -125,7 +120,7 @@ struct SheetWithDetentsViewModifier<SwiftUIContent>: ViewModifier where SwiftUIC
     
     func body(content: Content) -> some View {
         ZStack {
-            SheetPresentationForSwiftUI($isPresented, onDismiss: onDismiss, detents: detents) {
+            SheetPresentationForSwiftUI($isPresented,onDismiss: onDismiss, detents: detents) {
                 swiftUIContent
             }.fixedSize()
             content
@@ -133,23 +128,20 @@ struct SheetWithDetentsViewModifier<SwiftUIContent>: ViewModifier where SwiftUIC
     }
 }
 
-// MARK: - sheetWithDetents
-
-// Create extension on View that makes it easier to use the custom modifier.
-public extension View {
+// 3 - Create extension on View that makes it easier to use the custom modifier
+extension View {
+    
     func sheetWithDetents<Content>(
         isPresented: Binding<Bool>,
-        detents: [UISheetPresentationController.Detent] = [.medium()],
-        onDismiss: (() -> Void)? = nil,
-        content: @escaping () -> Content
-    ) -> some View where Content: View {
-        modifier(
-            SheetWithDetentsViewModifier(
-                isPresented: isPresented,
-                detents: detents,
-                onDismiss: onDismiss,
-                content: content
+        detents: [UISheetPresentationController.Detent],
+        onDismiss: (() -> Void)?,
+        content: @escaping () -> Content) -> some View where Content : View {
+            modifier(
+                sheetWithDetentsViewModifier(
+                    isPresented: isPresented,
+                    detents: detents,
+                    onDismiss: onDismiss,
+                    content: content)
             )
-        )
-    }
+        }
 }
