@@ -5,6 +5,8 @@
 //  Created by Gene Bogdanovich on 17.05.22.
 //
 
+// See: https://www.createwithswift.com/using-a-uisheetpresentationcontroller-in-swiftui/
+
 import SwiftUI
 
 // 1 - Create a UISheetPresentationController that can be used in a SwiftUI interface
@@ -131,7 +133,7 @@ struct sheetWithDetentsViewModifier<SwiftUIContent>: ViewModifier where SwiftUIC
 // 3 - Create extension on View that makes it easier to use the custom modifier
 extension View {
     
-    func sheetWithDetents<Content>(
+    public func sheetWithDetents<Content>(
         isPresented: Binding<Bool>,
         detents: [UISheetPresentationController.Detent],
         onDismiss: (() -> Void)?,
