@@ -9,15 +9,15 @@ import UIKit
 
 /// An struct that holds info to configure `UIAlertController` with `UITextField`.
 public struct TextFieldAlertConfig {
-    public let title: String
-    public let message: String?
-    public let placeholder: String
-    public let text: String?
-    public let cancellationTitle: String
-    public let confirmationTitle: String
-    public let autocapitalizationType: UITextAutocapitalizationType
-    public let validationRule: ((String) -> Bool)?
-    public let onSubmit: (String?) -> Void
+    internal let title: String
+    internal let message: String?
+    internal let placeholder: String
+    internal let text: String?
+    internal let cancellationTitle: String
+    internal let confirmationTitle: String
+    internal let autocapitalizationType: UITextAutocapitalizationType
+    internal let validationRule: ((String) -> Bool)?
+    internal let onSubmit: (String?) -> Void
     
     public init(
         title: String,
