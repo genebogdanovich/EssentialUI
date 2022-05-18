@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - TextFieldAlert
+
 struct TextFieldAlert<Content: View>: UIViewControllerRepresentable {
     @Binding private var isPresented: Bool
     private let config: TextFieldAlertConfig
@@ -68,6 +70,8 @@ struct TextFieldAlert<Content: View>: UIViewControllerRepresentable {
     }
 }
 
+// MARK: - TextFieldAlertModifier
+
 struct TextFieldAlertModifier<T: Any>: ViewModifier {
     @Binding private var isPresented: Bool
     private let config: TextFieldAlertConfig
@@ -99,6 +103,8 @@ struct TextFieldAlertModifier<T: Any>: ViewModifier {
         }
     }
 }
+
+// MARK: - View+
 
 extension View {
     public func textFieldAlert(

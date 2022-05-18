@@ -26,6 +26,7 @@
 		73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */; };
 		73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B02834D0B000188392 /* UIAlertController+.swift */; };
 		73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B22834D16600188392 /* TextFieldAlert.swift */; };
+		73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5C9472835173500FBE123 /* SubscribeButton.swift */; };
 		OBJ_22 /* EssentialUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* EssentialUI.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* EssentialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* EssentialUITests.swift */; };
@@ -55,6 +56,7 @@
 		73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertConfig.swift; sourceTree = "<group>"; };
 		73AC51B02834D0B000188392 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		73AC51B22834D16600188392 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
+		73D5C9472835173500FBE123 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		OBJ_12 /* EssentialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialUITests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -99,6 +101,31 @@
 				73AC51B22834D16600188392 /* TextFieldAlert.swift */,
 			);
 			path = TextFieldAlert;
+			sourceTree = "<group>";
+		};
+		73D5C944283515FC00FBE123 /* UI Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				73AC51AD2834D02300188392 /* TextFieldAlert */,
+				73AC51A82834BBC400188392 /* BottomSheet */,
+			);
+			path = "UI Architecture";
+			sourceTree = "<group>";
+		};
+		73D5C9452835165800FBE123 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				73D5C9462835165E00FBE123 /* Buttons */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		73D5C9462835165E00FBE123 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				73D5C9472835173500FBE123 /* SubscribeButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -150,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* EssentialUI.swift */,
-				73AC51AD2834D02300188392 /* TextFieldAlert */,
-				73AC51A82834BBC400188392 /* BottomSheet */,
+				73D5C9452835165800FBE123 /* Reusable Components */,
+				73D5C944283515FC00FBE123 /* UI Architecture */,
 			);
 			name = EssentialUI;
 			path = Sources/EssentialUI;
@@ -241,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */,
 				73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */,
 				73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */,
 				OBJ_22 /* EssentialUI.swift in Sources */,
