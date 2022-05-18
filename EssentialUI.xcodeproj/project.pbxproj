@@ -21,7 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		73EA54FA2833B9EA00EE539C /* SheetPresentationForSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA54F92833B9EA00EE539C /* SheetPresentationForSwiftUI.swift */; };
+		73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */; };
+		73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */; };
 		OBJ_22 /* EssentialUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* EssentialUI.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* EssentialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* EssentialUITests.swift */; };
@@ -46,7 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		73EA54F92833B9EA00EE539C /* SheetPresentationForSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPresentationForSwiftUI.swift; sourceTree = "<group>"; };
+		73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
 		OBJ_12 /* EssentialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialUITests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -74,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73AC51A82834BBC400188392 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */,
+				73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +111,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -109,7 +120,6 @@
 				OBJ_13 /* Products */,
 				OBJ_16 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -124,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* EssentialUI.swift */,
-				73EA54F92833B9EA00EE539C /* SheetPresentationForSwiftUI.swift */,
+				73AC51A82834BBC400188392 /* BottomSheet */,
 			);
 			name = EssentialUI;
 			path = Sources/EssentialUI;
@@ -196,7 +206,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */,
 				OBJ_22 /* EssentialUI.swift in Sources */,
-				73EA54FA2833B9EA00EE539C /* SheetPresentationForSwiftUI.swift in Sources */,
+				73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
