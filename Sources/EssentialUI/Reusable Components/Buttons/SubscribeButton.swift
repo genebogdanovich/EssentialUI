@@ -13,6 +13,7 @@ public enum SubscribeButtonState {
     case loading
     case regular
     case pending
+    case unavailable
 }
 
 // MARK: - SubscribeButtonStyle
@@ -58,12 +59,23 @@ public struct SubscribeButton: View {
                 ProgressView()
                     .tint(.white)
             } else {
-                Text(state == .regular ? title : "Pending")
+                Text(buttonTitle)
                     .fontWeight(state == .regular ? .bold : .medium)
             }
         }
         .buttonStyle(SubscribeButtonStyle(with: state))
         .disabled(state != .regular)
+    }
+    
+    private var buttonTitle: String {
+        switch state {
+        case .pending:
+            return "Pending"
+        case .unavailable:
+            return "Unavailable"
+        default:
+            return title
+        }
     }
 }
 
@@ -72,7 +84,7 @@ public struct SubscribeButton: View {
 struct SubscribeButton_Previews: PreviewProvider {
     @State static var isEligibleForIntroOffer = true
     static var previews: some View {
-        SubscribeButton(state: .pending, title: isEligibleForIntroOffer ? "Try It Free" : "Subscribe") {}
+        SubscribeButton(state: .unavailable, title: isEligibleForIntroOffer ? "Try It Free" : "Subscribe") {}
             .previewLayout(.sizeThatFits)
     }
 }
