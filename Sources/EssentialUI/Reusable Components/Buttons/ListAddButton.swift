@@ -19,12 +19,12 @@ public struct ListAddButton: View {
     }
     
     public var body: some View {
-        HStack(spacing: 18) {
+        Label {
+            Text(title)
+        } icon: {
             Image(systemName: "plus.circle.fill")
                 .renderingMode(.original)
                 .font(dynamicTypeSize.isAccessibilitySize ? .system(size: 42) : .title2)
-            
-            Text(title)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .contentShape(Rectangle())
