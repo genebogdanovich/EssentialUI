@@ -27,6 +27,7 @@ public struct ListAddButton: View {
                 .font(dynamicTypeSize.isAccessibilitySize ? .system(size: 42) : .title2)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .offset(x: -2)
         .contentShape(Rectangle())
         .onTapGesture(perform: action)
     }
