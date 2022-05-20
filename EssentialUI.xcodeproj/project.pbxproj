@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		737F522C28379AE50025092F /* ListAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522B28379AE50025092F /* ListAddButton.swift */; };
 		73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */; };
 		73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */; };
 		73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		737F522B28379AE50025092F /* ListAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddButton.swift; sourceTree = "<group>"; };
 		73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
 		73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertConfig.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				73D5C9472835173500FBE123 /* SubscribeButton.swift */,
+				737F522B28379AE50025092F /* ListAddButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */,
 				73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */,
 				73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */,
+				737F522C28379AE50025092F /* ListAddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
