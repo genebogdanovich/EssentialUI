@@ -13,6 +13,7 @@ public enum SubscribeButtonState {
     case loading
     case regular
     case pending
+    case subscribed
     case unavailable
 }
 
@@ -30,7 +31,7 @@ struct SubscribeButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
             .padding()
-            .background(Color.accentColor)
+            .background(state == .subscribed ? Color.green : Color.accentColor)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .scaleEffect(configuration.isPressed ? 0.99 : 1.0)
     }
@@ -71,6 +72,8 @@ public struct SubscribeButton: View {
         switch state {
         case .pending:
             return "Pending"
+        case .subscribed:
+            return "Subscribed"
         case .unavailable:
             return "Unavailable"
         default:
@@ -84,7 +87,7 @@ public struct SubscribeButton: View {
 struct SubscribeButton_Previews: PreviewProvider {
     @State static var isEligibleForIntroOffer = true
     static var previews: some View {
-        SubscribeButton(state: .unavailable, title: isEligibleForIntroOffer ? "Try It Free" : "Subscribe") {}
+        SubscribeButton(state: .subscribed, title: isEligibleForIntroOffer ? "Try It Free" : "Subscribe") {}
             .previewLayout(.sizeThatFits)
     }
 }
