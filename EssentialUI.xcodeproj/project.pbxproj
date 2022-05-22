@@ -25,6 +25,9 @@
 		737F52302837A6D60025092F /* OnTapLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522F2837A6D60025092F /* OnTapLink.swift */; };
 		738CC0E0283A6A990030E6C4 /* NumberedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0DF283A6A990030E6C4 /* NumberedRow.swift */; };
 		738CC0E2283A6D1E0030E6C4 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0E1283A6D1E0030E6C4 /* EmptyStateView.swift */; };
+		738CC0E4283A77550030E6C4 /* FilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0E3283A77550030E6C4 /* FilterMenu.swift */; };
+		738CC0E6283A78240030E6C4 /* ActionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0E5283A78240030E6C4 /* ActionMenu.swift */; };
+		738CC0E8283A79A30030E6C4 /* TimeIntervalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0E7283A79A30030E6C4 /* TimeIntervalLabel.swift */; };
 		738D201F283A5AAA00146337 /* DestructiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D201E283A5AAA00146337 /* DestructiveButton.swift */; };
 		738D2021283A5B8F00146337 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D2020283A5B8F00146337 /* DismissButton.swift */; };
 		738D2023283A5D3000146337 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D2022283A5D3000146337 /* FavoriteButton.swift */; };
@@ -71,6 +74,9 @@
 		737F522F2837A6D60025092F /* OnTapLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapLink.swift; sourceTree = "<group>"; };
 		738CC0DF283A6A990030E6C4 /* NumberedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberedRow.swift; sourceTree = "<group>"; };
 		738CC0E1283A6D1E0030E6C4 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		738CC0E3283A77550030E6C4 /* FilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMenu.swift; sourceTree = "<group>"; };
+		738CC0E5283A78240030E6C4 /* ActionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMenu.swift; sourceTree = "<group>"; };
+		738CC0E7283A79A30030E6C4 /* TimeIntervalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalLabel.swift; sourceTree = "<group>"; };
 		738D201E283A5AAA00146337 /* DestructiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestructiveButton.swift; sourceTree = "<group>"; };
 		738D2020283A5B8F00146337 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
 		738D2022283A5D3000146337 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -123,14 +129,6 @@
 				7396A4C5283A445000443856 /* DayRectangle.swift */,
 				7396A4C7283A466500443856 /* InfoView.swift */,
 				7396A4D1283A4E4600443856 /* DateEditor.swift */,
-				7396A4CC283A4C5F00443856 /* Essential */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		7396A4CC283A4C5F00443856 /* Essential */ = {
-			isa = PBXGroup;
-			children = (
 				7396A4CD283A4C8500443856 /* DoneButton.swift */,
 				7396A4D3283A510D00443856 /* SettingsButton.swift */,
 				738D201E283A5AAA00146337 /* DestructiveButton.swift */,
@@ -138,11 +136,14 @@
 				738D2024283A627000146337 /* CreateButton.swift */,
 				738D2026283A62FF00146337 /* EUEditButton.swift */,
 				738CC0DF283A6A990030E6C4 /* NumberedRow.swift */,
+				738CC0E3283A77550030E6C4 /* FilterMenu.swift */,
 				738CC0E1283A6D1E0030E6C4 /* EmptyStateView.swift */,
 				738D2022283A5D3000146337 /* FavoriteButton.swift */,
 				7396A4CF283A4D1F00443856 /* CancelButton.swift */,
+				738CC0E7283A79A30030E6C4 /* TimeIntervalLabel.swift */,
+				738CC0E5283A78240030E6C4 /* ActionMenu.swift */,
 			);
-			path = Essential;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		73AC51A82834BBC400188392 /* BottomSheet */ = {
@@ -336,6 +337,7 @@
 				738CC0E2283A6D1E0030E6C4 /* EmptyStateView.swift in Sources */,
 				7396A4D2283A4E4700443856 /* DateEditor.swift in Sources */,
 				738D2025283A627100146337 /* CreateButton.swift in Sources */,
+				738CC0E6283A78240030E6C4 /* ActionMenu.swift in Sources */,
 				738D2023283A5D3000146337 /* FavoriteButton.swift in Sources */,
 				738D201F283A5AAA00146337 /* DestructiveButton.swift in Sources */,
 				737F52302837A6D60025092F /* OnTapLink.swift in Sources */,
@@ -355,6 +357,8 @@
 				7396A4D4283A510D00443856 /* SettingsButton.swift in Sources */,
 				73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */,
 				73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */,
+				738CC0E4283A77550030E6C4 /* FilterMenu.swift in Sources */,
+				738CC0E8283A79A30030E6C4 /* TimeIntervalLabel.swift in Sources */,
 				737F522C28379AE50025092F /* ListAddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

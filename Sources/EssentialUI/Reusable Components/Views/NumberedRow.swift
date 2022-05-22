@@ -48,6 +48,7 @@ public struct NumberedRow: View {
             Text("\(count)")
                 .foregroundColor(.secondary)
         }
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -55,7 +56,7 @@ struct NumberedRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NumberedRow(withTitle: "Guests", icon: Image(systemName: "person.fill"), count: 5)
-            NumberedRow(withTitle: "Pneumonoultramicroscopicsilicovolcanoconiosis", icon: nil, count: Int64(5))
+            NumberedRow(withTitle: "Pneumonoultramicroscopicsilicovolcanoconiosis", count: Int64(5))
         }
         .padding()
         .previewLayout(.sizeThatFits)
