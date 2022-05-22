@@ -15,7 +15,7 @@ public struct NumberedRow: View {
     
     public init(
         withTitle title: String,
-        icon: Image?,
+        icon: Image? = nil,
         count: Int
     ) {
         self.title = title
@@ -25,7 +25,7 @@ public struct NumberedRow: View {
     
     public init(
         withTitle title: String,
-        icon: Image?,
+        icon: Image? = nil,
         count: Int64
     ) {
         self.init(withTitle: title, icon: icon, count: Int(count))
