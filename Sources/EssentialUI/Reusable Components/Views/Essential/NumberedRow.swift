@@ -8,13 +8,13 @@
 import SwiftUI
 
 public struct NumberedRow: View {
-    private let title: LocalizedStringKey
+    private let title: String
     private let icon: Image?
     private let count: Int
     
     
     public init(
-        withTitle title: LocalizedStringKey,
+        withTitle title: String,
         icon: Image?,
         count: Int
     ) {
@@ -24,7 +24,7 @@ public struct NumberedRow: View {
     }
     
     public init(
-        withTitle title: LocalizedStringKey,
+        withTitle title: String,
         icon: Image?,
         count: Int64
     ) {
