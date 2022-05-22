@@ -46,13 +46,13 @@ public struct InfoView: View {
 }
 
 struct InfoView_Previews: PreviewProvider {
-    static let title = "Lorem Ipsum"
-    static let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices nunc ut consequat pulvinar. Proin nec nulla nec mi interdum tempor."
+    static let title: LocalizedStringKey = "Lorem Ipsum"
+    static let text: LocalizedStringKey = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices nunc ut consequat pulvinar. Proin nec nulla nec mi interdum tempor."
     
     static var previews: some View {
         InfoView(
-            withTitle: LocalizedStringKey(title),
-            text: LocalizedStringKey(text),
+            withTitle: title,
+            text: text,
             image: .init(systemName: "person.fill")
         )
     }
