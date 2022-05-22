@@ -23,6 +23,8 @@
 /* Begin PBXBuildFile section */
 		737F522C28379AE50025092F /* ListAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522B28379AE50025092F /* ListAddButton.swift */; };
 		737F52302837A6D60025092F /* OnTapLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522F2837A6D60025092F /* OnTapLink.swift */; };
+		7396A4C4283A438100443856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C3283A438100443856 /* LoadingView.swift */; };
+		7396A4C6283A445000443856 /* DayRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C5283A445000443856 /* DayRectangle.swift */; };
 		73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */; };
 		73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */; };
 		73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		737F522B28379AE50025092F /* ListAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddButton.swift; sourceTree = "<group>"; };
 		737F522F2837A6D60025092F /* OnTapLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapLink.swift; sourceTree = "<group>"; };
+		7396A4C3283A438100443856 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		7396A4C5283A445000443856 /* DayRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRectangle.swift; sourceTree = "<group>"; };
 		73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
 		73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertConfig.swift; sourceTree = "<group>"; };
@@ -88,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7396A4C2283A436A00443856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7396A4C3283A438100443856 /* LoadingView.swift */,
+				7396A4C5283A445000443856 /* DayRectangle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		73AC51A82834BBC400188392 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,8 +132,8 @@
 		73D5C9452835165800FBE123 /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				7396A4C2283A436A00443856 /* Views */,
 				73D5C9462835165E00FBE123 /* Buttons */,
-				737F522F2837A6D60025092F /* OnTapLink.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -129,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				73D5C9472835173500FBE123 /* SubscribeButton.swift */,
+				737F522F2837A6D60025092F /* OnTapLink.swift */,
 				737F522B28379AE50025092F /* ListAddButton.swift */,
 			);
 			path = Buttons;
@@ -276,7 +290,9 @@
 			files = (
 				737F52302837A6D60025092F /* OnTapLink.swift in Sources */,
 				73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */,
+				7396A4C6283A445000443856 /* DayRectangle.swift in Sources */,
 				73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */,
+				7396A4C4283A438100443856 /* LoadingView.swift in Sources */,
 				73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */,
 				OBJ_22 /* EssentialUI.swift in Sources */,
 				73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */,
