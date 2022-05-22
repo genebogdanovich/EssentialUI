@@ -28,6 +28,7 @@
 		7396A4C8283A466500443856 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C7283A466500443856 /* InfoView.swift */; };
 		7396A4CE283A4C8500443856 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4CD283A4C8500443856 /* DoneButton.swift */; };
 		7396A4D0283A4D1F00443856 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4CF283A4D1F00443856 /* CancelButton.swift */; };
+		7396A4D2283A4E4700443856 /* DateEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4D1283A4E4600443856 /* DateEditor.swift */; };
 		73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */; };
 		73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */; };
 		73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */; };
@@ -65,6 +66,7 @@
 		7396A4C7283A466500443856 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		7396A4CD283A4C8500443856 /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		7396A4CF283A4D1F00443856 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
+		7396A4D1283A4E4600443856 /* DateEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEditor.swift; sourceTree = "<group>"; };
 		73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
 		73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertConfig.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				7396A4C3283A438100443856 /* LoadingView.swift */,
 				7396A4C5283A445000443856 /* DayRectangle.swift */,
 				7396A4C7283A466500443856 /* InfoView.swift */,
+				7396A4D1283A4E4600443856 /* DateEditor.swift */,
 				7396A4CC283A4C5F00443856 /* Essential */,
 			);
 			path = Views;
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				7396A4D2283A4E4700443856 /* DateEditor.swift in Sources */,
 				737F52302837A6D60025092F /* OnTapLink.swift in Sources */,
 				7396A4D0283A4D1F00443856 /* CancelButton.swift in Sources */,
 				73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */,
