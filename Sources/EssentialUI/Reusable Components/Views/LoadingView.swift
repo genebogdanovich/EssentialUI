@@ -8,9 +8,9 @@
 import SwiftUI
 
 public struct LoadingView: View {
-    private let title: String
+    private let title: LocalizedStringKey
     
-    public init(title: String = "Loading") {
+    public init(title: LocalizedStringKey = "Loading") {
         self.title = title
     }
     

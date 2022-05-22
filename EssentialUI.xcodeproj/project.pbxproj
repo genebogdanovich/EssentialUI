@@ -25,6 +25,7 @@
 		737F52302837A6D60025092F /* OnTapLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522F2837A6D60025092F /* OnTapLink.swift */; };
 		7396A4C4283A438100443856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C3283A438100443856 /* LoadingView.swift */; };
 		7396A4C6283A445000443856 /* DayRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C5283A445000443856 /* DayRectangle.swift */; };
+		7396A4C8283A466500443856 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C7283A466500443856 /* InfoView.swift */; };
 		73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */; };
 		73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */; };
 		73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */; };
@@ -59,6 +60,7 @@
 		737F522F2837A6D60025092F /* OnTapLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapLink.swift; sourceTree = "<group>"; };
 		7396A4C3283A438100443856 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7396A4C5283A445000443856 /* DayRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRectangle.swift; sourceTree = "<group>"; };
+		7396A4C7283A466500443856 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
 		73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertConfig.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* EssentialUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialUI.swift; sourceTree = "<group>"; };
-		"essentialui::EssentialUI::Product" /* EssentialUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EssentialUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"essentialui::EssentialUI::Product" /* EssentialUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"essentialui::EssentialUITests::Product" /* EssentialUITests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = EssentialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 			children = (
 				7396A4C3283A438100443856 /* LoadingView.swift */,
 				7396A4C5283A445000443856 /* DayRectangle.swift */,
+				7396A4C7283A466500443856 /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */,
 				7396A4C6283A445000443856 /* DayRectangle.swift in Sources */,
 				73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */,
+				7396A4C8283A466500443856 /* InfoView.swift in Sources */,
 				7396A4C4283A438100443856 /* LoadingView.swift in Sources */,
 				73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */,
 				OBJ_22 /* EssentialUI.swift in Sources */,
@@ -338,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -368,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
