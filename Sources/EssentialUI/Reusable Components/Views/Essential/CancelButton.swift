@@ -12,7 +12,7 @@ public struct CancelButton: View {
     private let action: () -> Void
     
     public init(
-        title: LocalizedStringKey = "Cancel",
+        withTitle title: LocalizedStringKey = "Cancel",
         action: @escaping () -> Void
     ) {
         self.title = title
@@ -20,12 +20,12 @@ public struct CancelButton: View {
     }
     
     public var body: some View {
-        Button("Cancel", role: .cancel, action: action)
+        Button(title, role: .cancel, action: action)
     }
 }
 
 struct CancelButton_Previews: PreviewProvider {
     static var previews: some View {
-        CancelButton() {}
+        CancelButton(withTitle: "Stop") {}
     }
 }

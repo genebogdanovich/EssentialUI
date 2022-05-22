@@ -12,7 +12,7 @@ public struct DismissButton: View {
     private let action: () -> Void
     
     public init(
-        _ title: LocalizedStringKey = "Dismiss",
+        withTitle title: LocalizedStringKey = "Dismiss",
         action: @escaping () -> Void
     ) {
         self.title = title
@@ -42,6 +42,6 @@ public struct DismissButton: View {
 
 struct DismissButton_Previews: PreviewProvider {
     static var previews: some View {
-        DismissButton() {}
+        DismissButton(withTitle: "Close") {}
     }
 }

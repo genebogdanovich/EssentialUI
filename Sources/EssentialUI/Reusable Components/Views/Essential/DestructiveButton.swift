@@ -12,7 +12,7 @@ public struct DestructiveButton: View {
     private let action: () -> Void
     
     public init(
-        title: LocalizedStringKey = "Delete",
+        withTitle title: LocalizedStringKey = "Delete",
         action: @escaping () -> Void
     ) {
         self.title = title
@@ -34,6 +34,6 @@ public struct DestructiveButton: View {
 
 struct DestructiveButton_Previews: PreviewProvider {
     static var previews: some View {
-        DestructiveButton() {}
+        DestructiveButton(withTitle: "Remove") {}
     }
 }
