@@ -41,12 +41,12 @@ struct SubscribeButtonStyle: ButtonStyle {
 
 public struct SubscribeButton: View {
     private let state: SubscribeButtonState
-    private let title: String
+    private let title: LocalizedStringKey
     private let action: () -> Void
     
     public init(
         state: SubscribeButtonState,
-        title: String,
+        title: LocalizedStringKey,
         action: @escaping () -> Void
     ) {
         self.state = state
@@ -68,7 +68,7 @@ public struct SubscribeButton: View {
         .disabled(state != .regular)
     }
     
-    private var buttonTitle: String {
+    private var buttonTitle: LocalizedStringKey {
         switch state {
         case .pending:
             return "Pending"
