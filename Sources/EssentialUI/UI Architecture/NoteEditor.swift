@@ -23,6 +23,7 @@ public struct NoteEditor: View {
                 .padding(.horizontal, 4)
                 .navigationTitle(navigationTitle)
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar(content: toolbarContent)
         }
     }
 }
