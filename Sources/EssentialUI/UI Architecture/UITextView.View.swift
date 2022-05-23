@@ -12,6 +12,10 @@ import SwiftUI
 public extension UITextView {
     struct View {
         @Binding var text: NSAttributedString
+        
+        public init(text: Binding<NSAttributedString>) {
+            self._text = text
+        }
     }
 }
 
