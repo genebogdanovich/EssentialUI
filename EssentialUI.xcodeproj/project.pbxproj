@@ -40,6 +40,7 @@
 		738F8A97283BB60E00BF2A6A /* OnTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F8A96283BB60E00BF2A6A /* OnTapButton.swift */; };
 		738F8A99283BBC5100BF2A6A /* NSMutableAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */; };
 		738F8A9B283BBD4F00BF2A6A /* UITextView.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */; };
+		738F8A9D283BC05800BF2A6A /* NoteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F8A9C283BC05800BF2A6A /* NoteEditor.swift */; };
 		7396A4C4283A438100443856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C3283A438100443856 /* LoadingView.swift */; };
 		7396A4C6283A445000443856 /* DayRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C5283A445000443856 /* DayRectangle.swift */; };
 		7396A4C8283A466500443856 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C7283A466500443856 /* InfoView.swift */; };
@@ -96,6 +97,7 @@
 		738F8A96283BB60E00BF2A6A /* OnTapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapButton.swift; sourceTree = "<group>"; };
 		738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+.swift"; sourceTree = "<group>"; };
 		738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.View.swift; sourceTree = "<group>"; };
+		738F8A9C283BC05800BF2A6A /* NoteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditor.swift; sourceTree = "<group>"; };
 		7396A4C3283A438100443856 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7396A4C5283A445000443856 /* DayRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRectangle.swift; sourceTree = "<group>"; };
 		7396A4C7283A466500443856 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				738CC0ED283A7E9D0030E6C4 /* AdaptiveStack.swift */,
 				738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */,
 				738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */,
+				738F8A9C283BC05800BF2A6A /* NoteEditor.swift */,
 			);
 			path = "UI Architecture";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				738F8A9D283BC05800BF2A6A /* NoteEditor.swift in Sources */,
 				738F8A99283BBC5100BF2A6A /* NSMutableAttributedString+.swift in Sources */,
 				738CC0E2283A6D1E0030E6C4 /* EmptyStateView.swift in Sources */,
 				738F8A97283BB60E00BF2A6A /* OnTapButton.swift in Sources */,
