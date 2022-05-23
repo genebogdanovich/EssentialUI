@@ -13,11 +13,11 @@ public struct OnTapLink<Label: View>: View {
     private let action: () -> Void
     
     public init(
-        @ViewBuilder label: () -> Label,
-        action: @escaping () -> Void
+        action: @escaping () -> Void,
+        @ViewBuilder label: () -> Label
     ) {
-        self.label = label()
         self.action = action
+        self.label = label()
     }
     
     public var body: some View {
@@ -36,8 +36,10 @@ struct OnTapLink_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             Form {
-                OnTapLink(label: { Label("People", systemImage: "person") }) {
-                    print("link")
+                OnTapLink {
+                    print("tapped link")
+                } label: {
+                    Label("People", systemImage: "person")
                 }
             }
             .environment(\.editMode, .constant(.active))
