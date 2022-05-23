@@ -38,6 +38,8 @@
 		738D2025283A627100146337 /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D2024283A627000146337 /* CreateButton.swift */; };
 		738D2027283A62FF00146337 /* EUEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D2026283A62FF00146337 /* EUEditButton.swift */; };
 		738F8A97283BB60E00BF2A6A /* OnTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F8A96283BB60E00BF2A6A /* OnTapButton.swift */; };
+		738F8A99283BBC5100BF2A6A /* NSMutableAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */; };
+		738F8A9B283BBD4F00BF2A6A /* UITextView.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */; };
 		7396A4C4283A438100443856 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C3283A438100443856 /* LoadingView.swift */; };
 		7396A4C6283A445000443856 /* DayRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C5283A445000443856 /* DayRectangle.swift */; };
 		7396A4C8283A466500443856 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4C7283A466500443856 /* InfoView.swift */; };
@@ -92,6 +94,8 @@
 		738D2024283A627000146337 /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
 		738D2026283A62FF00146337 /* EUEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUEditButton.swift; sourceTree = "<group>"; };
 		738F8A96283BB60E00BF2A6A /* OnTapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapButton.swift; sourceTree = "<group>"; };
+		738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+.swift"; sourceTree = "<group>"; };
+		738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.View.swift; sourceTree = "<group>"; };
 		7396A4C3283A438100443856 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7396A4C5283A445000443856 /* DayRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRectangle.swift; sourceTree = "<group>"; };
 		7396A4C7283A466500443856 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				738CC0E9283A7C440030E6C4 /* UIFont+.swift */,
 				738CC0EB283A7E490030E6C4 /* SizeReader.swift */,
 				738CC0ED283A7E9D0030E6C4 /* AdaptiveStack.swift */,
+				738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */,
+				738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */,
 			);
 			path = "UI Architecture";
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				738F8A99283BBC5100BF2A6A /* NSMutableAttributedString+.swift in Sources */,
 				738CC0E2283A6D1E0030E6C4 /* EmptyStateView.swift in Sources */,
 				738F8A97283BB60E00BF2A6A /* OnTapButton.swift in Sources */,
 				738CC0EA283A7C440030E6C4 /* UIFont+.swift in Sources */,
@@ -375,6 +382,7 @@
 				73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */,
 				7396A4D4283A510D00443856 /* SettingsButton.swift in Sources */,
 				73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */,
+				738F8A9B283BBD4F00BF2A6A /* UITextView.View.swift in Sources */,
 				73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */,
 				738CC0E4283A77550030E6C4 /* FilterMenu.swift in Sources */,
 				738CC0EC283A7E490030E6C4 /* SizeReader.swift in Sources */,
