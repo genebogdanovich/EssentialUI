@@ -24,6 +24,9 @@ public struct OnTapLink<Label: View>: View {
         NavigationLink(destination: { EmptyView() }) {
             label
         }
+        .accessibilityAction {
+            action()
+        }
         .contentShape(Rectangle())
         .onTapGesture(perform: action)
     }
