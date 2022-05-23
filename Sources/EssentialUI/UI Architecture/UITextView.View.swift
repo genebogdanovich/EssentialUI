@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - UITextView.View
 
-extension UITextView {
+public extension UITextView {
     struct View {
         @Binding var text: NSAttributedString
     }
@@ -18,7 +18,7 @@ extension UITextView {
 // MARK: - UIViewRepresentable
 
 extension UITextView.View: UIViewRepresentable {
-    func makeUIView(context: Context) -> UITextView {
+    public func makeUIView(context: Context) -> UITextView {
         let textView = UITextView()
         textView.delegate = context.coordinator
         textView.allowsEditingTextAttributes = true
@@ -32,11 +32,11 @@ extension UITextView.View: UIViewRepresentable {
         return textView
     }
     
-    func updateUIView(_ uiView: UITextView, context: Context) {
+    public func updateUIView(_ uiView: UITextView, context: Context) {
         uiView.attributedText = text
     }
     
-    func makeCoordinator() -> some UITextViewDelegate {
+    public func makeCoordinator() -> some UITextViewDelegate {
         UITextView.Delegate(text: $text)
     }
 }
