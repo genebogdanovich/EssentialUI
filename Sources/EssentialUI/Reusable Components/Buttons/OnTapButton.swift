@@ -21,6 +21,7 @@ public struct OnTapButton<Label: View>: View {
     
     public var body: some View {
         label
+            .foregroundColor(.accentColor)
             .frame(maxWidth: .infinity, alignment: .leading)
             .contentShape(Rectangle())
             .onTapGesture(perform: action)
