@@ -9,7 +9,7 @@
 
 import UIKit
 
-extension NSMutableAttributedString {
+public extension NSMutableAttributedString {
     func setFontWhilePreservingSymbolicTraits(_ font: UIFont) {
         beginEditing()
         self.enumerateAttribute(

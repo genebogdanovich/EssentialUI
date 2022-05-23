@@ -9,9 +9,9 @@ import SwiftUI
 
 // MARK: - UITextView.View
 
-public extension UITextView {
-    struct View {
-        @Binding var text: NSAttributedString
+extension UITextView {
+    public struct View {
+        @Binding private var text: NSAttributedString
         
         public init(text: Binding<NSAttributedString>) {
             self._text = text
