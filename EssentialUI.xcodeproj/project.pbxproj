@@ -31,7 +31,6 @@
 		738CC0EA283A7C440030E6C4 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0E9283A7C440030E6C4 /* UIFont+.swift */; };
 		738CC0EC283A7E490030E6C4 /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0EB283A7E490030E6C4 /* SizeReader.swift */; };
 		738CC0EE283A7E9D0030E6C4 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0ED283A7E9D0030E6C4 /* AdaptiveStack.swift */; };
-		738CC0F0283A804C0030E6C4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0EF283A804C0030E6C4 /* RatingView.swift */; };
 		738D201F283A5AAA00146337 /* DestructiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D201E283A5AAA00146337 /* DestructiveButton.swift */; };
 		738D2021283A5B8F00146337 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D2020283A5B8F00146337 /* DismissButton.swift */; };
 		738D2023283A5D3000146337 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D2022283A5D3000146337 /* FavoriteButton.swift */; };
@@ -54,6 +53,7 @@
 		73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B02834D0B000188392 /* UIAlertController+.swift */; };
 		73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B22834D16600188392 /* TextFieldAlert.swift */; };
 		73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5C9472835173500FBE123 /* SubscribeButton.swift */; };
+		73E5B643283CB1F90023038E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5B642283CB1F90023038E /* RatingView.swift */; };
 		OBJ_22 /* EssentialUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* EssentialUI.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* EssentialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* EssentialUITests.swift */; };
@@ -88,7 +88,6 @@
 		738CC0E9283A7C440030E6C4 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		738CC0EB283A7E490030E6C4 /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
 		738CC0ED283A7E9D0030E6C4 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
-		738CC0EF283A804C0030E6C4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		738D201E283A5AAA00146337 /* DestructiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestructiveButton.swift; sourceTree = "<group>"; };
 		738D2020283A5B8F00146337 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
 		738D2022283A5D3000146337 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		73AC51B02834D0B000188392 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		73AC51B22834D16600188392 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
 		73D5C9472835173500FBE123 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
+		73E5B642283CB1F90023038E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		OBJ_12 /* EssentialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialUITests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				7396A4CF283A4D1F00443856 /* CancelButton.swift */,
 				738CC0E7283A79A30030E6C4 /* TimeIntervalLabel.swift */,
 				738CC0E5283A78240030E6C4 /* ActionMenu.swift */,
-				738CC0EF283A804C0030E6C4 /* RatingView.swift */,
+				73E5B642283CB1F90023038E /* RatingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,12 +364,12 @@
 				738F8A97283BB60E00BF2A6A /* OnTapButton.swift in Sources */,
 				738CC0EA283A7C440030E6C4 /* UIFont+.swift in Sources */,
 				7396A4D2283A4E4700443856 /* DateEditor.swift in Sources */,
-				738CC0F0283A804C0030E6C4 /* RatingView.swift in Sources */,
 				738D2025283A627100146337 /* CreateButton.swift in Sources */,
 				738CC0E6283A78240030E6C4 /* ActionMenu.swift in Sources */,
 				738D2023283A5D3000146337 /* FavoriteButton.swift in Sources */,
 				738D201F283A5AAA00146337 /* DestructiveButton.swift in Sources */,
 				737F52302837A6D60025092F /* OnTapLink.swift in Sources */,
+				73E5B643283CB1F90023038E /* RatingView.swift in Sources */,
 				7396A4D0283A4D1F00443856 /* CancelButton.swift in Sources */,
 				738CC0E0283A6A990030E6C4 /* NumberedRow.swift in Sources */,
 				73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */,
