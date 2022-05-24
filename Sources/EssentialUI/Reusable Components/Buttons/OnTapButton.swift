@@ -25,6 +25,7 @@ public struct OnTapButton<Label: View>: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .contentShape(Rectangle())
             .onTapGesture(perform: action)
+            .accessibilityAddTraits(.isButton)
     }
 }
 
