@@ -76,7 +76,7 @@ public struct RatingView: View {
             case .increment:
                 if rating < maximumRating { rating += 1 }
             case .decrement:
-                if rating > 1 { rating -= 1 }
+                if rating > 0 { rating -= 1 }
             default:
                 break
             }
