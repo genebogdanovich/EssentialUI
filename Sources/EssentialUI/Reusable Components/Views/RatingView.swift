@@ -34,6 +34,26 @@ public struct RatingView: View {
         self.onColor = onColor
     }
     
+    public init(
+        rating: Binding<Int16>,
+        label: String = "",
+        maximumRating: Int = 5,
+        offImage: Image? = nil,
+        onImage: Image = Image(systemName: "star.fill"),
+        offColor: Color = Color.gray,
+        onColor: Color = Color.yellow
+    ) {
+        self.init(
+            rating: Binding<Int>(get: { Int(rating.wrappedValue) }, set: { rating.wrappedValue = Int16($0) }),
+            label: label,
+            maximumRating: maximumRating,
+            offImage: offImage,
+            onImage: onImage,
+            offColor: offColor,
+            onColor: onColor
+        )
+    }
+    
     public var body: some View {
         HStack {
             if label.isEmpty == false {
