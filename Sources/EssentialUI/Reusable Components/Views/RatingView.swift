@@ -94,7 +94,11 @@ extension RatingView {
     }
     
     func adjustRating(for number: Int) {
-        rating = number
+        if rating == number {
+            rating = 0
+        } else {
+            rating = number
+        }
     }
 }
 
