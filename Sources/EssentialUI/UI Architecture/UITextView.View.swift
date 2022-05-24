@@ -33,6 +33,8 @@ extension UITextView.View: UIViewRepresentable {
         nsMutableAttributedString.setFontWhilePreservingSymbolicTraits(.preferredFont(forTextStyle: .title3))
         text = nsMutableAttributedString
         
+        textView.becomeFirstResponder()
+        
         return textView
     }
     
