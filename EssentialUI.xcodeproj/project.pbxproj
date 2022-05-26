@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		73122C81283F437100001974 /* _FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73122C80283F437100001974 /* _FlexibleView.swift */; };
+		73122C83283F439D00001974 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73122C82283F439D00001974 /* FlexibleView.swift */; };
 		737F522C28379AE50025092F /* ListAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522B28379AE50025092F /* ListAddButton.swift */; };
 		737F52302837A6D60025092F /* OnTapLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522F2837A6D60025092F /* OnTapLink.swift */; };
 		738CC0E0283A6A990030E6C4 /* NumberedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0DF283A6A990030E6C4 /* NumberedRow.swift */; };
@@ -78,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73122C80283F437100001974 /* _FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlexibleView.swift; sourceTree = "<group>"; };
+		73122C82283F439D00001974 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		737F522B28379AE50025092F /* ListAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddButton.swift; sourceTree = "<group>"; };
 		737F522F2837A6D60025092F /* OnTapLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapLink.swift; sourceTree = "<group>"; };
 		738CC0DF283A6A990030E6C4 /* NumberedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberedRow.swift; sourceTree = "<group>"; };
@@ -138,6 +142,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73122C7F283F435700001974 /* FlexibleView */ = {
+			isa = PBXGroup;
+			children = (
+				73122C80283F437100001974 /* _FlexibleView.swift */,
+				73122C82283F439D00001974 /* FlexibleView.swift */,
+			);
+			path = FlexibleView;
+			sourceTree = "<group>";
+		};
 		7396A4C2283A436A00443856 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +198,7 @@
 		73D5C944283515FC00FBE123 /* UI Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				73122C7F283F435700001974 /* FlexibleView */,
 				73AC51AD2834D02300188392 /* TextFieldAlert */,
 				73AC51A82834BBC400188392 /* BottomSheet */,
 				738CC0E9283A7C440030E6C4 /* UIFont+.swift */,
@@ -381,6 +395,7 @@
 				73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */,
 				738CC0EE283A7E9D0030E6C4 /* AdaptiveStack.swift in Sources */,
 				7396A4CE283A4C8500443856 /* DoneButton.swift in Sources */,
+				73122C81283F437100001974 /* _FlexibleView.swift in Sources */,
 				OBJ_22 /* EssentialUI.swift in Sources */,
 				738D2027283A62FF00146337 /* EUEditButton.swift in Sources */,
 				73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */,
@@ -388,6 +403,7 @@
 				73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */,
 				738F8A9B283BBD4F00BF2A6A /* UITextView.View.swift in Sources */,
 				73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */,
+				73122C83283F439D00001974 /* FlexibleView.swift in Sources */,
 				738CC0E4283A77550030E6C4 /* FilterMenu.swift in Sources */,
 				738CC0EC283A7E490030E6C4 /* SizeReader.swift in Sources */,
 				738CC0E8283A79A30030E6C4 /* TimeIntervalLabel.swift in Sources */,
