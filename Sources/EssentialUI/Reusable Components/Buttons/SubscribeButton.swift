@@ -61,6 +61,7 @@ public struct SubscribeButton: View {
                     .tint(.white)
             } else {
                 Text(buttonTitle)
+                    .font(.callout)
                     .fontWeight(state == .regular ? .bold : .medium)
             }
         }
