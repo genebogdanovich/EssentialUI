@@ -41,12 +41,12 @@ struct SubscribeButtonStyle: ButtonStyle {
 
 public struct SubscribeButton: View {
     private let state: SubscribeButtonState
-    private let title: LocalizedStringKey
+    private let title: String
     private let action: () -> Void
     
     public init(
         state: SubscribeButtonState,
-        title: LocalizedStringKey,
+        title: String,
         action: @escaping () -> Void
     ) {
         self.state = state
@@ -77,7 +77,7 @@ public struct SubscribeButton: View {
         case .unavailable:
             return "Unavailable"
         default:
-            return title
+            return LocalizedStringKey(title)
         }
     }
 }
@@ -87,7 +87,7 @@ public struct SubscribeButton: View {
 struct SubscribeButton_Previews: PreviewProvider {
     @State static var isEligibleForIntroOffer = true
     static var previews: some View {
-        SubscribeButton(state: .subscribed, title: isEligibleForIntroOffer ? "Try It Free" : "Subscribe") {}
+        SubscribeButton(state: .regular, title: isEligibleForIntroOffer ? "Week free then $1.99 per month" : "$1.99 per month") {}
             .previewLayout(.sizeThatFits)
     }
 }
