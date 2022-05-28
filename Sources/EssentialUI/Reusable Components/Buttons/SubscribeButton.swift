@@ -41,14 +41,14 @@ struct SubscribeButtonStyle: ButtonStyle {
 
 public struct SubscribeButton: View {
     private let state: SubscribeButtonState
-    private let title: LocalizedStringKey
-    private let subtitle: LocalizedStringKey?
+    private let title: String
+    private let subtitle: String?
     private let action: () -> Void
     
     public init(
         state: SubscribeButtonState,
-        title: LocalizedStringKey,
-        subtitle: LocalizedStringKey?,
+        title: String,
+        subtitle: String?,
         action: @escaping () -> Void
     ) {
         self.state = state
@@ -78,7 +78,7 @@ public struct SubscribeButton: View {
         .disabled(state != .available)
     }
     
-    private var _title: LocalizedStringKey? {
+    private var _title: String? {
         switch state {
         case .pending:
             return "Pending"
@@ -93,7 +93,7 @@ public struct SubscribeButton: View {
         }
     }
     
-    private var _subtitle: LocalizedStringKey? {
+    private var _subtitle: String? {
         switch state {
         case .available:
             return subtitle
