@@ -49,12 +49,12 @@
 		7396A4D0283A4D1F00443856 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4CF283A4D1F00443856 /* CancelButton.swift */; };
 		7396A4D2283A4E4700443856 /* DateEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4D1283A4E4600443856 /* DateEditor.swift */; };
 		7396A4D4283A510D00443856 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4D3283A510D00443856 /* SettingsButton.swift */; };
+		73A7651128429AA80063214A /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7651028429AA80063214A /* SubscribeButton.swift */; };
 		73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */; };
 		73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */; };
 		73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */; };
 		73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B02834D0B000188392 /* UIAlertController+.swift */; };
 		73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B22834D16600188392 /* TextFieldAlert.swift */; };
-		73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5C9472835173500FBE123 /* SubscribeButton.swift */; };
 		73E5B643283CB1F90023038E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5B642283CB1F90023038E /* RatingView.swift */; };
 		OBJ_22 /* EssentialUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* EssentialUI.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -108,12 +108,12 @@
 		7396A4CF283A4D1F00443856 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		7396A4D1283A4E4600443856 /* DateEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEditor.swift; sourceTree = "<group>"; };
 		7396A4D3283A510D00443856 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		73A7651028429AA80063214A /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
 		73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertConfig.swift; sourceTree = "<group>"; };
 		73AC51B02834D0B000188392 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		73AC51B22834D16600188392 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
-		73D5C9472835173500FBE123 /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		73E5B642283CB1F90023038E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		OBJ_12 /* EssentialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialUITests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -223,10 +223,10 @@
 		73D5C9462835165E00FBE123 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				73D5C9472835173500FBE123 /* SubscribeButton.swift */,
 				737F522F2837A6D60025092F /* OnTapLink.swift */,
 				738F8A96283BB60E00BF2A6A /* OnTapButton.swift */,
 				737F522B28379AE50025092F /* ListAddButton.swift */,
+				73A7651028429AA80063214A /* SubscribeButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -378,6 +378,7 @@
 				738F8A97283BB60E00BF2A6A /* OnTapButton.swift in Sources */,
 				738CC0EA283A7C440030E6C4 /* UIFont+.swift in Sources */,
 				7396A4D2283A4E4700443856 /* DateEditor.swift in Sources */,
+				73A7651128429AA80063214A /* SubscribeButton.swift in Sources */,
 				738D2025283A627100146337 /* CreateButton.swift in Sources */,
 				738CC0E6283A78240030E6C4 /* ActionMenu.swift in Sources */,
 				738D2023283A5D3000146337 /* FavoriteButton.swift in Sources */,
@@ -386,7 +387,6 @@
 				73E5B643283CB1F90023038E /* RatingView.swift in Sources */,
 				7396A4D0283A4D1F00443856 /* CancelButton.swift in Sources */,
 				738CC0E0283A6A990030E6C4 /* NumberedRow.swift in Sources */,
-				73D5C9482835173500FBE123 /* SubscribeButton.swift in Sources */,
 				7396A4C6283A445000443856 /* DayRectangle.swift in Sources */,
 				738D2021283A5B8F00146337 /* DismissButton.swift in Sources */,
 				73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */,

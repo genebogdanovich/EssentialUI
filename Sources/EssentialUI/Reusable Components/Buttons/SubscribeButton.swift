@@ -2,7 +2,7 @@
 //  SubscribeButton.swift
 //  EssentialUI
 //
-//  Created by Gene Bogdanovich on 18.05.22.
+//  Created by Gene Bogdanovich on 28.05.22.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 
 public enum SubscribeButtonState {
     case loading
-    case regular
+    case available
     case pending
     case subscribed
     case unavailable
@@ -30,7 +30,7 @@ struct SubscribeButtonStyle: ButtonStyle {
         configuration.label
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
-            .padding()
+            .padding(12)
             .background(state == .subscribed ? Color.green : Color.accentColor)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .scaleEffect(configuration.isPressed ? 0.99 : 1.0)
@@ -41,35 +41,44 @@ struct SubscribeButtonStyle: ButtonStyle {
 
 public struct SubscribeButton: View {
     private let state: SubscribeButtonState
-    private let title: AttributedString
+    private let title: LocalizedStringKey
+    private let subtitle: LocalizedStringKey
     private let action: () -> Void
     
     public init(
         state: SubscribeButtonState,
-        title: AttributedString,
+        title: LocalizedStringKey,
+        subtitle: LocalizedStringKey,
         action: @escaping () -> Void
     ) {
         self.state = state
         self.title = title
+        self.subtitle = subtitle
         self.action = action
     }
     
     public var body: some View {
         Button(action: action) {
-            if state == .loading {
-                ProgressView()
-                    .tint(.white)
-            } else {
-                Text(buttonTitle)
-                    .font(.callout)
-                    .fontWeight(state == .regular ? .bold : .medium)
+            VStack {
+                if let titleText = _title {
+                    Text(titleText)
+                        .font(.callout.weight(.bold))
+                } else {
+                    ProgressView()
+                        .tint(.white)
+                }
+                
+                if let subtitleText = _subtitle {
+                    Text(subtitleText)
+                        .font(.caption)
+                }
             }
         }
         .buttonStyle(SubscribeButtonStyle(with: state))
-        .disabled(state != .regular)
+        .disabled(state != .available)
     }
     
-    private var buttonTitle: AttributedString {
+    private var _title: LocalizedStringKey? {
         switch state {
         case .pending:
             return "Pending"
@@ -77,18 +86,61 @@ public struct SubscribeButton: View {
             return "Subscribed"
         case .unavailable:
             return "Unavailable"
+        case .loading:
+            return nil
         default:
             return title
         }
     }
+    
+    private var _subtitle: LocalizedStringKey? {
+        switch state {
+        case .available:
+            return subtitle
+        case .unavailable:
+            return "please try back later"
+        default:
+            return nil
+        }
+    }
 }
 
-// MARK: - SubscribeButton_Previews
-
 struct SubscribeButton_Previews: PreviewProvider {
-    @State static var isEligibleForIntroOffer = true
+    
     static var previews: some View {
-        SubscribeButton(state: .regular, title: isEligibleForIntroOffer ? "Week free then $1.99 per month" : "$1.99 per month") {}
+        Group {
+            SubscribeButton(
+                state: .loading,
+                title: "Subscribe for $1.99 per month",
+                subtitle: "after the 7-day free trial"
+            ) {}
+            
+            SubscribeButton(
+                state: .available,
+                title: "Subscribe for $1.99 per month",
+                subtitle: "after the 7-day free trial"
+            ) {}
+            
+            SubscribeButton(
+                state: .pending,
+                title: "Subscribe for $1.99 per month",
+                subtitle: "after the 7-day free trial"
+            ) {}
+            
+            SubscribeButton(
+                state: .subscribed,
+                title: "Subscribe for $1.99 per month",
+                subtitle: "after the 7-day free trial"
+            ) {}
+            
+            SubscribeButton(
+                state: .unavailable,
+                title: "Subscribe for $1.99 per month",
+                subtitle: "after the 7-day free trial"
+            ) {}
+        }
             .previewLayout(.sizeThatFits)
+            .padding()
+            .preferredColorScheme(.dark)
     }
 }
