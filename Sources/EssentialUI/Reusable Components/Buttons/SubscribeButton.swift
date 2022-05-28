@@ -42,13 +42,13 @@ struct SubscribeButtonStyle: ButtonStyle {
 public struct SubscribeButton: View {
     private let state: SubscribeButtonState
     private let title: LocalizedStringKey
-    private let subtitle: LocalizedStringKey
+    private let subtitle: LocalizedStringKey?
     private let action: () -> Void
     
     public init(
         state: SubscribeButtonState,
         title: LocalizedStringKey,
-        subtitle: LocalizedStringKey,
+        subtitle: LocalizedStringKey?,
         action: @escaping () -> Void
     ) {
         self.state = state
@@ -118,6 +118,12 @@ struct SubscribeButton_Previews: PreviewProvider {
             SubscribeButton(
                 state: .available,
                 title: "Subscribe for $1.99 per month",
+                subtitle: nil
+            ) {}
+            
+            SubscribeButton(
+                state: .available,
+                title: "Subscribe for $1.99 per month",
                 subtitle: "after the 7-day free trial"
             ) {}
             
@@ -144,3 +150,4 @@ struct SubscribeButton_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
+
