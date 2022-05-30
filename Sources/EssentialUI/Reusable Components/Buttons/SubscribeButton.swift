@@ -30,7 +30,7 @@ struct SubscribeButtonStyle: ButtonStyle {
         configuration.label
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
-            .padding(12)
+            .frame(minHeight: 50)
             .background(state == .subscribed ? Color.green : Color.accentColor)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .scaleEffect(configuration.isPressed ? 0.99 : 1.0)
@@ -148,6 +148,7 @@ struct SubscribeButton_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
             .padding()
             .preferredColorScheme(.dark)
+//            .dynamicTypeSize(.accessibility5)
     }
 }
 
