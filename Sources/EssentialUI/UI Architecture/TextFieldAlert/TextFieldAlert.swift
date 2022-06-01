@@ -89,7 +89,6 @@ struct TextFieldAlertModifier<T: Any>: ViewModifier {
         item: Binding<T?>,
         config: TextFieldAlertConfig
     ) {
-        print("Inited binding with: \(item.wrappedValue)")
         self._isPresented = Binding<Bool>(get: {
             item.wrappedValue != nil
         }, set: { newValue in
