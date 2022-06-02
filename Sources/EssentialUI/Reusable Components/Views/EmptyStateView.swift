@@ -10,17 +10,20 @@ import SwiftUI
 public struct EmptyStateView: View {
     private let title: LocalizedStringKey?
     private let text: LocalizedStringKey?
+    private let textForegroundColor: Color
     private let image: Image
     private let imageSize: CGSize
     
     public init(
         title: LocalizedStringKey? = nil,
         text: LocalizedStringKey? = nil,
+        textForegroundColor: Color = .secondary,
         image: Image,
         imageSize: CGSize = .init(width: 100, height: 100)
     ) {
         self.title = title
         self.text = text
+        self.textForegroundColor = textForegroundColor
         self.image = image
         self.imageSize = imageSize
     }
@@ -44,7 +47,7 @@ public struct EmptyStateView: View {
                 Text(text)
                     .font(.body.weight(.medium))
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(textForegroundColor)
             }
             
         }
@@ -58,8 +61,8 @@ struct EmptyStateView_Previews: PreviewProvider {
     
     static var previews: some View {
         EmptyStateView(
-            title: title,
             text: text,
+            textForegroundColor: .primary,
             image: Image(systemName: "person"),
             imageSize: .init(width: 64, height: 64)
         )
