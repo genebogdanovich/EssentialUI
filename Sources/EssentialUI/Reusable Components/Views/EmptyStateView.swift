@@ -14,7 +14,7 @@ public struct EmptyStateView: View {
     
     public init(
         withTitle title: LocalizedStringKey,
-        text: LocalizedStringKey?,
+        text: LocalizedStringKey? = nil,
         image: Image?
     ) {
         self.title = title
