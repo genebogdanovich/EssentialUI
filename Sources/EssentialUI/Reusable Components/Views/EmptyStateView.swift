@@ -8,34 +8,37 @@
 import SwiftUI
 
 public struct EmptyStateView: View {
-    private let title: LocalizedStringKey
+    private let title: LocalizedStringKey?
     private let text: LocalizedStringKey?
-    private let image: Image?
+    private let image: Image
+    private let imageSize: CGSize
     
     public init(
-        withTitle title: LocalizedStringKey,
+        withTitle title: LocalizedStringKey? = nil,
         text: LocalizedStringKey? = nil,
-        image: Image?
+        image: Image,
+        imageSize: CGSize = .init(width: 100, height: 100)
     ) {
         self.title = title
         self.text = text
         self.image = image
+        self.imageSize = imageSize
     }
     
     public var body: some View {
-        VStack(spacing: 4) {
-            if let image = image {
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-                    .accessibilityHidden(true)
-            }
+        VStack(spacing: 8) {
+            image
+                .resizable()
+                .scaledToFit()
+                .frame(width: imageSize.width, height: imageSize.height)
+                .accessibilityHidden(true)
             
-            Text(title)
-                .font(.system(.title2, design: .rounded))
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
+            if let title = title {
+                Text(title)
+                    .font(.system(.title2, design: .rounded))
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+            }
             
             if let text = text {
                 Text(text)
@@ -57,7 +60,8 @@ struct EmptyStateView_Previews: PreviewProvider {
         EmptyStateView(
             withTitle: title,
             text: text,
-            image: Image(systemName: "person")
+            image: Image(systemName: "person"),
+            imageSize: .init(width: 64, height: 64)
         )
         .padding()
         .previewLayout(.sizeThatFits)
