@@ -14,7 +14,7 @@ public struct EmptyStateView: View {
     private let imageSize: CGSize
     
     public init(
-        withTitle title: LocalizedStringKey? = nil,
+        title: LocalizedStringKey? = nil,
         text: LocalizedStringKey? = nil,
         image: Image,
         imageSize: CGSize = .init(width: 100, height: 100)
@@ -58,7 +58,7 @@ struct EmptyStateView_Previews: PreviewProvider {
     
     static var previews: some View {
         EmptyStateView(
-            withTitle: title,
+            title: title,
             text: text,
             image: Image(systemName: "person"),
             imageSize: .init(width: 64, height: 64)
