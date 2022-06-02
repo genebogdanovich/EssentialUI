@@ -113,6 +113,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
                 selectedDetentIdentifier: $selectedDetentIdentifier,
                 widthFollowsPreferredContentSizeWhenEdgeAttached: widthFollowsPreferredContentSizeWhenEdgeAttached,
                 isModalInPresentation: isModalInPresentation,
+                preferredCornerRadius: preferredCornerRadius,
                 content: contentView()
             )
             
@@ -173,7 +174,7 @@ extension View {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
-        preferredCornerRadius: CGFloat?,
+        preferredCornerRadius: CGFloat? = nil,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) -> some View {
