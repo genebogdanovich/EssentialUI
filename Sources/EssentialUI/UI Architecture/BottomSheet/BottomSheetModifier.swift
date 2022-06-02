@@ -34,7 +34,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
-        preferredCornerRadius: CGFloat?,
+        preferredCornerRadius: CGFloat? = nil,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) {
@@ -63,7 +63,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
-        preferredCornerRadius: CGFloat?,
+        preferredCornerRadius: CGFloat? = nil,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) {
@@ -141,7 +141,7 @@ extension View {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
-        preferredCornerRadius: CGFloat?,
+        preferredCornerRadius: CGFloat? = nil,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) -> some View {
