@@ -18,6 +18,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
     @Binding private var selectedDetentIdentifier: UISheetPresentationController.Detent.Identifier?
     private let widthFollowsPreferredContentSizeWhenEdgeAttached: Bool
     private let isModalInPresentation: Bool
+    private let preferredCornerRadius: CGFloat?
     private var onDismiss: (() -> Void)?
     private let contentView: () -> ContentView
     
@@ -33,6 +34,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
+        preferredCornerRadius: CGFloat?,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) {
@@ -46,6 +48,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         self._selectedDetentIdentifier = selectedDetentIdentifier
         self.widthFollowsPreferredContentSizeWhenEdgeAttached = widthFollowsPreferredContentSizeWhenEdgeAttached
         self.isModalInPresentation = isModalInPresentation
+        self.preferredCornerRadius = preferredCornerRadius
         self.contentView = contentView
         self.onDismiss = onDismiss
     }
@@ -60,6 +63,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
+        preferredCornerRadius: CGFloat?,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) {
@@ -76,6 +80,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         self._selectedDetentIdentifier = selectedDetentIdentifier
         self.widthFollowsPreferredContentSizeWhenEdgeAttached = widthFollowsPreferredContentSizeWhenEdgeAttached
         self.isModalInPresentation = isModalInPresentation
+        self.preferredCornerRadius = preferredCornerRadius
         self.contentView = contentView
         self.onDismiss = onDismiss
     }
@@ -136,6 +141,7 @@ extension View {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
+        preferredCornerRadius: CGFloat?,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) -> some View {
@@ -150,6 +156,7 @@ extension View {
                 selectedDetentIdentifier: selectedDetentIdentifier,
                 widthFollowsPreferredContentSizeWhenEdgeAttached: widthFollowsPreferredContentSizeWhenEdgeAttached,
                 isModalInPresentation: isModalInPresentation,
+                preferredCornerRadius: preferredCornerRadius,
                 onDismiss: onDismiss,
                 contentView: contentView
             )
@@ -166,6 +173,7 @@ extension View {
         selectedDetentIdentifier: Binding<UISheetPresentationController.Detent.Identifier?> = Binding.constant(nil),
         widthFollowsPreferredContentSizeWhenEdgeAttached: Bool = false,
         isModalInPresentation: Bool = false,
+        preferredCornerRadius: CGFloat?,
         onDismiss: (() -> Void)? = nil,
         @ViewBuilder contentView: @escaping () -> ContentView
     ) -> some View {
@@ -180,6 +188,7 @@ extension View {
                 selectedDetentIdentifier: selectedDetentIdentifier,
                 widthFollowsPreferredContentSizeWhenEdgeAttached: widthFollowsPreferredContentSizeWhenEdgeAttached,
                 isModalInPresentation: isModalInPresentation,
+                preferredCornerRadius: preferredCornerRadius,
                 onDismiss: onDismiss,
                 contentView: contentView
             )
