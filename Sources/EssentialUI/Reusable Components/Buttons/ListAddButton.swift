@@ -7,15 +7,11 @@
 
 import SwiftUI
 
-public struct ListAddButton: View {
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+public struct ListAddButtonLabel: View {
     private let title: LocalizedStringKey
-    private let action: () -> Void
     
-    
-    public init(title: LocalizedStringKey, action: @escaping () -> Void) {
+    public init(title: LocalizedStringKey) {
         self.title = title
-        self.action = action
     }
     
     public var body: some View {
@@ -24,12 +20,27 @@ public struct ListAddButton: View {
         } icon: {
             Image(systemName: "plus.circle.fill")
                 .renderingMode(.original)
-                .font(dynamicTypeSize.isAccessibilitySize ? .system(size: 42) : .title2)
+                .font(.title2)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .offset(x: -2)
-        .contentShape(Rectangle())
-        .onTapGesture(perform: action)
+    }
+}
+
+public struct ListAddButton: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    private let title: LocalizedStringKey
+    private let action: () -> Void
+    
+    public init(title: LocalizedStringKey, action: @escaping () -> Void) {
+        self.title = title
+        self.action = action
+    }
+    
+    public var body: some View {
+        ListAddButtonLabel(title: title)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .offset(x: -2)
+            .contentShape(Rectangle())
+            .onTapGesture(perform: action)
     }
 }
 
@@ -46,6 +57,6 @@ struct ListAddButton_Previews: PreviewProvider {
             .onDelete(perform: { _ in })
         }
         .environment(\.editMode, .constant(.active))
-//        .dynamicTypeSize(.accessibility5)
+        .dynamicTypeSize(.xxxLarge)
     }
 }
