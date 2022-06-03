@@ -45,7 +45,6 @@ public struct EmptyStateView: View {
             
             if let text = text {
                 Text(text)
-                    .font(.body.weight(.medium))
                     .multilineTextAlignment(.center)
                     .foregroundColor(textForegroundColor)
             }
