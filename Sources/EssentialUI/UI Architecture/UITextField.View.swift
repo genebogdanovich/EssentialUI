@@ -25,7 +25,7 @@ extension UITextField.View: UIViewRepresentable {
     public func makeUIView(context: Context) -> UITextField {
         let textField = UITextField()
         textField.delegate = context.coordinator
-        
+        textField.backgroundColor = UIColor.green
         return textField
     }
     
