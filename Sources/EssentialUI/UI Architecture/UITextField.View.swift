@@ -72,9 +72,11 @@ extension UITextField.Delegate: UITextFieldDelegate {
      */
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let selectedRange = textField.selectedTextRange
         let currentText = textField.text ?? ""
         let replacementText = (currentText as NSString).replacingCharacters(in: range, with: string)
         self.text = replacementText
+        textField.selectedTextRange = selectedRange
         return true
     }
 }
