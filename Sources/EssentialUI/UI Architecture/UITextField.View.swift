@@ -50,7 +50,6 @@ extension UITextField.View: UIViewRepresentable {
         return textField
     }
     
-    // SwiftUI -> UIKit
     public func updateUIView(_ uiView: UITextField, context: Context) {
         uiView.text = text
     }
@@ -63,23 +62,16 @@ extension UITextField.View: UIViewRepresentable {
 // MARK: - UITextFieldDelegate
 
 extension UITextField.Delegate: UITextFieldDelegate {
-    // UIKit -> StringUI
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let text = textField.text else { return }
-        self.text = text
-    }
-     
-    /*
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.isEmpty { return true }
         
-        let currentText = textField.text ?? ""
-        let replacementText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        guard let text = textField.text else { return true }
+        let replacementText = (text as NSString).replacingCharacters(in: range, with: string)
+        
         self.text = replacementText
         
         return true
     }
-     */
 }
 
 // MARK: - UITextField.Delegate
