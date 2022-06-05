@@ -23,7 +23,7 @@
 /* Begin PBXBuildFile section */
 		73122C81283F437100001974 /* _FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73122C80283F437100001974 /* _FlexibleView.swift */; };
 		73122C83283F439D00001974 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73122C82283F439D00001974 /* FlexibleView.swift */; };
-		731DF0342849F8F6008BCC97 /* UITextField.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731DF0332849F8F6008BCC97 /* UITextField.View.swift */; };
+		7369236C284CA18A000B3CAB /* UITextField.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7369236B284CA18A000B3CAB /* UITextField.View.swift */; };
 		737F522C28379AE50025092F /* ListAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522B28379AE50025092F /* ListAddButton.swift */; };
 		737F52302837A6D60025092F /* OnTapLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F522F2837A6D60025092F /* OnTapLink.swift */; };
 		738CC0E0283A6A990030E6C4 /* NumberedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CC0DF283A6A990030E6C4 /* NumberedRow.swift */; };
@@ -83,7 +83,7 @@
 /* Begin PBXFileReference section */
 		73122C80283F437100001974 /* _FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _FlexibleView.swift; sourceTree = "<group>"; };
 		73122C82283F439D00001974 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
-		731DF0332849F8F6008BCC97 /* UITextField.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.View.swift; sourceTree = "<group>"; };
+		7369236B284CA18A000B3CAB /* UITextField.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.View.swift; sourceTree = "<group>"; };
 		737F522B28379AE50025092F /* ListAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddButton.swift; sourceTree = "<group>"; };
 		737F522F2837A6D60025092F /* OnTapLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapLink.swift; sourceTree = "<group>"; };
 		738CC0DF283A6A990030E6C4 /* NumberedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberedRow.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				738CC0ED283A7E9D0030E6C4 /* AdaptiveStack.swift */,
 				738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */,
 				738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */,
-				731DF0332849F8F6008BCC97 /* UITextField.View.swift */,
+				7369236B284CA18A000B3CAB /* UITextField.View.swift */,
 				738F8A9C283BC05800BF2A6A /* NoteEditor.swift */,
 			);
 			path = "UI Architecture";
@@ -409,7 +409,7 @@
 				73122C83283F439D00001974 /* FlexibleView.swift in Sources */,
 				738CC0E4283A77550030E6C4 /* FilterMenu.swift in Sources */,
 				738CC0EC283A7E490030E6C4 /* SizeReader.swift in Sources */,
-				731DF0342849F8F6008BCC97 /* UITextField.View.swift in Sources */,
+				7369236C284CA18A000B3CAB /* UITextField.View.swift in Sources */,
 				738CC0E8283A79A30030E6C4 /* TimeIntervalLabel.swift in Sources */,
 				737F522C28379AE50025092F /* ListAddButton.swift in Sources */,
 			);
