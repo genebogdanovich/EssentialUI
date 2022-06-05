@@ -64,9 +64,21 @@ extension UITextField.View: UIViewRepresentable {
 
 extension UITextField.Delegate: UITextFieldDelegate {
     // UIKit -> StringUI
+    /*
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
         self.text = text
+    }
+     */
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let currentText = text
+        
+        let replacementText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        self.text = replacementText
+        
+        return true
     }
 }
 
