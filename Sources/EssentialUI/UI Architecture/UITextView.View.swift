@@ -55,7 +55,7 @@ extension UITextView.Delegate: UITextViewDelegate {
     }
 }
 
-// MARK: - UITextView.Delegate
+// MARK: - UITextView.Coordinator
 
 extension UITextView {
     final class Delegate: NSObject {

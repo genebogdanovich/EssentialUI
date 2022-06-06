@@ -39,6 +39,7 @@ extension UITextField.View: UIViewRepresentable {
     public func makeUIView(context: Context) -> UITextField {
         let textField = UITextField()
         textField.delegate = context.coordinator
+        textField.addTarget(context.coordinator, action: #selector(context.coordinator.textChanged), for: .editingChanged)
         
         textField.keyboardType = keyboardType
         textField.placeholder = placeholder
@@ -54,14 +55,15 @@ extension UITextField.View: UIViewRepresentable {
         uiView.text = text
     }
     
-    public func makeCoordinator() -> some UITextFieldDelegate {
-        UITextField.Delegate(text: $text)
+    public func makeCoordinator() -> UITextField.Coordinator {
+        UITextField.Coordinator(text: $text)
     }
 }
 
 // MARK: - UITextFieldDelegate
 
-extension UITextField.Delegate: UITextFieldDelegate {
+extension UITextField.Coordinator: UITextFieldDelegate {
+    /*
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.isEmpty { return true }
         
@@ -72,16 +74,23 @@ extension UITextField.Delegate: UITextFieldDelegate {
         
         return true
     }
+     */
 }
 
 // MARK: - UITextField.Delegate
 
 extension UITextField {
-    final class Delegate: NSObject {
+    public final class Coordinator: NSObject {
         @Binding private var text: String
         
         public init(text: Binding<String>) {
             self._text = text
+        }
+        
+        @objc func textChanged(_ sender: UITextField) {
+            if let text = sender.text {
+                self.text = text
+            }
         }
     }
 }
