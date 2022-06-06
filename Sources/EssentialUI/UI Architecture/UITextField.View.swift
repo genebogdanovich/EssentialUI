@@ -2,7 +2,7 @@
 //  UITextField.View.swift
 //  EssentialUI
 //
-//  Created by Gene Bogdanovich on 5.06.22.
+//  Created by Gene Bogdanovich on 6.06.22.
 //
 
 import SwiftUI
@@ -12,23 +12,25 @@ import SwiftUI
 extension UITextField {
     public struct View {
         @Binding private var text: String
-        private let keyboardType: UIKeyboardType
+        
         private let placeholder: String?
-        private let font: UIFont
+        private let font: UIFont?
         private let textAlignment: NSTextAlignment
+        private let keyboardType: UIKeyboardType
         
         public init(
             text: Binding<String>,
-            keyboardType: UIKeyboardType = .default,
             placeholder: String? = nil,
-            font: UIFont = .preferredFont(forTextStyle: .body),
-            textAlignment: NSTextAlignment = .left
+            font: UIFont? = .preferredFont(forTextStyle: .body),
+            textAlignment: NSTextAlignment = .left,
+            keyboardType: UIKeyboardType = .default
+            
         ) {
             self._text = text
-            self.keyboardType = keyboardType
             self.placeholder = placeholder
             self.font = font
             self.textAlignment = textAlignment
+            self.keyboardType = keyboardType
         }
     }
 }
@@ -38,15 +40,13 @@ extension UITextField {
 extension UITextField.View: UIViewRepresentable {
     public func makeUIView(context: Context) -> UITextField {
         let textField = UITextField()
-        textField.delegate = context.coordinator
+        
         textField.addTarget(context.coordinator, action: #selector(context.coordinator.textChanged), for: .editingChanged)
         
-        textField.keyboardType = keyboardType
         textField.placeholder = placeholder
         textField.font = font
         textField.textAlignment = textAlignment
-        
-        textField.becomeFirstResponder()
+        textField.keyboardType = keyboardType
         
         return textField
     }
@@ -60,24 +60,7 @@ extension UITextField.View: UIViewRepresentable {
     }
 }
 
-// MARK: - UITextFieldDelegate
-
-extension UITextField.Coordinator: UITextFieldDelegate {
-    /*
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-        
-        guard let text = textField.text else { return true }
-        let replacementText = (text as NSString).replacingCharacters(in: range, with: string)
-        
-        self.text = replacementText
-        
-        return true
-    }
-     */
-}
-
-// MARK: - UITextField.Delegate
+// MARK: - UITextField.Coordinator
 
 extension UITextField {
     public final class Coordinator: NSObject {
@@ -88,9 +71,8 @@ extension UITextField {
         }
         
         @objc func textChanged(_ sender: UITextField) {
-            if let text = sender.text {
-                self.text = text
-            }
+            guard let text = sender.text else { return }
+            self.text = text
         }
     }
 }
