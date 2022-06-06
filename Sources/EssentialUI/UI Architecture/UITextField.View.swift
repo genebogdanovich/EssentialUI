@@ -48,6 +48,8 @@ extension UITextField.View: UIViewRepresentable {
         textField.textAlignment = textAlignment
         textField.keyboardType = keyboardType
         
+        textField.becomeFirstResponder()
+        
         return textField
     }
     
