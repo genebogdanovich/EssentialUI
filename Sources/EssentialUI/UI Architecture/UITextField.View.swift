@@ -65,7 +65,7 @@ extension UITextField.View: UIViewRepresentable {
 extension UITextField.Coordinator: UITextFieldDelegate {
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.isEmpty { return true }
+
         
         guard let text = textField.text else { return true }
         let replacementText = (text as NSString).replacingCharacters(in: range, with: string)
