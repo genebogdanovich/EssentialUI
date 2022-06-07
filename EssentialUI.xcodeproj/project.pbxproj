@@ -56,6 +56,7 @@
 		73AC51AF2834D05600188392 /* TextFieldAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */; };
 		73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B02834D0B000188392 /* UIAlertController+.swift */; };
 		73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B22834D16600188392 /* TextFieldAlert.swift */; };
+		73C4372B284F7A9E0051BBC2 /* PresentationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C4372A284F7A9E0051BBC2 /* PresentationLink.swift */; };
 		73E5B643283CB1F90023038E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5B642283CB1F90023038E /* RatingView.swift */; };
 		OBJ_22 /* EssentialUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* EssentialUI.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -116,6 +117,7 @@
 		73AC51AE2834D05600188392 /* TextFieldAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertConfig.swift; sourceTree = "<group>"; };
 		73AC51B02834D0B000188392 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		73AC51B22834D16600188392 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
+		73C4372A284F7A9E0051BBC2 /* PresentationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLink.swift; sourceTree = "<group>"; };
 		73E5B642283CB1F90023038E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		OBJ_12 /* EssentialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialUITests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				738D2022283A5D3000146337 /* FavoriteButton.swift */,
 				7396A4CF283A4D1F00443856 /* CancelButton.swift */,
 				737F522F2837A6D60025092F /* OnTapLink.swift */,
+				73C4372A284F7A9E0051BBC2 /* PresentationLink.swift */,
 				738F8A96283BB60E00BF2A6A /* OnTapButton.swift */,
 				737F522B28379AE50025092F /* ListAddButton.swift */,
 				73A7651028429AA80063214A /* SubscribeButton.swift */,
@@ -406,6 +409,7 @@
 				73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */,
 				738F8A9B283BBD4F00BF2A6A /* UITextView.View.swift in Sources */,
 				73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */,
+				73C4372B284F7A9E0051BBC2 /* PresentationLink.swift in Sources */,
 				73122C83283F439D00001974 /* FlexibleView.swift in Sources */,
 				738CC0E4283A77550030E6C4 /* FilterMenu.swift in Sources */,
 				738CC0EC283A7E490030E6C4 /* SizeReader.swift in Sources */,

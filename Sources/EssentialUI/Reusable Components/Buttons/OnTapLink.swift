@@ -9,26 +9,24 @@ import SwiftUI
 
 public struct OnTapLink<Label: View>: View {
     
-    private let label: Label
+    private let label: () -> Label
     private let action: () -> Void
     
     public init(
         action: @escaping () -> Void,
-        @ViewBuilder label: () -> Label
+        @ViewBuilder label: @escaping () -> Label
     ) {
         self.action = action
-        self.label = label()
+        self.label = label
     }
     
     public var body: some View {
-        NavigationLink(destination: { EmptyView() }) {
-            label
-        }
-        .accessibilityAction {
-            action()
-        }
-        .contentShape(Rectangle())
-        .onTapGesture(perform: action)
+        NavigationLink(destination: { EmptyView() }, label: label)
+            .accessibilityAction {
+                action()
+            }
+            .contentShape(Rectangle())
+            .onTapGesture(perform: action)
     }
 }
 
