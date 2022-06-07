@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A view that looks like NavigationLink but in fact presents modal.
-struct PresentationLink<Label: View>: View {
+public struct PresentationLink<Label: View>: View {
     
     private let label: () -> Label
     @Binding private var isPresentingModal: Bool
