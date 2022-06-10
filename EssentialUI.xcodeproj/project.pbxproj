@@ -57,6 +57,7 @@
 		73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B02834D0B000188392 /* UIAlertController+.swift */; };
 		73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51B22834D16600188392 /* TextFieldAlert.swift */; };
 		73C4372B284F7A9E0051BBC2 /* PresentationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C4372A284F7A9E0051BBC2 /* PresentationLink.swift */; };
+		73D316BD28533688003A8EB7 /* SectionStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D316BC28533688003A8EB7 /* SectionStepper.swift */; };
 		73E5B643283CB1F90023038E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5B642283CB1F90023038E /* RatingView.swift */; };
 		OBJ_22 /* EssentialUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* EssentialUI.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -118,6 +119,7 @@
 		73AC51B02834D0B000188392 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		73AC51B22834D16600188392 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
 		73C4372A284F7A9E0051BBC2 /* PresentationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLink.swift; sourceTree = "<group>"; };
+		73D316BC28533688003A8EB7 /* SectionStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionStepper.swift; sourceTree = "<group>"; };
 		73E5B642283CB1F90023038E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		OBJ_12 /* EssentialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialUITests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				738CC0E7283A79A30030E6C4 /* TimeIntervalLabel.swift */,
 				738CC0E5283A78240030E6C4 /* ActionMenu.swift */,
 				73E5B642283CB1F90023038E /* RatingView.swift */,
+				73D316BC28533688003A8EB7 /* SectionStepper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				738CC0EC283A7E490030E6C4 /* SizeReader.swift in Sources */,
 				73750F32284DD43F0059A8DB /* UITextField.View.swift in Sources */,
 				738CC0E8283A79A30030E6C4 /* TimeIntervalLabel.swift in Sources */,
+				73D316BD28533688003A8EB7 /* SectionStepper.swift in Sources */,
 				737F522C28379AE50025092F /* ListAddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
