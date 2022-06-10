@@ -61,6 +61,8 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
     private let remark: LocalizedStringKey
     private let formatter: Formatter
     
+    private let isPresentingAdditionalControlView: Binding<Bool>?
+    
     private var displayString: String? {
         if let interval = value as? TimeInterval, let dateComponentsFormatter = formatter as? DateComponentsFormatter {
             return dateComponentsFormatter.string(from: interval)
@@ -73,7 +75,15 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
     
     public var body: some View {
         Section {
-            DataRow(title: title, data: displayString)
+            
+            
+            if let binding = isPresentingAdditionalControlView {
+                PresentationLink(isPresentingModal: binding) {
+                    DataRow(title: title, data: displayString)
+                }
+            } else {
+                DataRow(title: title, data: displayString)
+            }
             
             Stepper(value: $value, step: step) {
                 Text(remark)
@@ -91,7 +101,7 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
 
 
 
-// Init for creating SectionStepper without header.
+
 
 public extension SectionStepper where Header == EmptyView {
     init(
@@ -99,7 +109,8 @@ public extension SectionStepper where Header == EmptyView {
         remark: LocalizedStringKey,
         value: Binding<V>,
         step: V.Stride = 1,
-        formatter: Formatter
+        formatter: Formatter,
+        isPresentingAdditionalControlView: Binding<Bool>? = nil
     ) {
         self._value = value
         self.step = step
@@ -108,11 +119,12 @@ public extension SectionStepper where Header == EmptyView {
         self.remark = remark
         
         self.formatter = formatter
+        self.isPresentingAdditionalControlView = isPresentingAdditionalControlView
         
     }
 }
 
-// // Init for creating SectionStepper with header.
+
 
 public extension SectionStepper {
     init(
@@ -121,6 +133,7 @@ public extension SectionStepper {
         value: Binding<V>,
         step: V.Stride = 1,
         formatter: Formatter,
+        isPresentingAdditionalControlView: Binding<Bool>? = nil,
         @ViewBuilder header: () -> Header
     ) {
         self._value = value
@@ -130,6 +143,8 @@ public extension SectionStepper {
         self.remark = remark
         
         self.formatter = formatter
+        
+        self.isPresentingAdditionalControlView = isPresentingAdditionalControlView
         
         self.header = header()
     }
