@@ -7,32 +7,6 @@
 
 import SwiftUI
 
-public struct DataRow: View {
-    private let title: LocalizedStringKey
-    private let data: String?
-    
-    public init(
-        title: LocalizedStringKey,
-        data: String?
-    ) {
-        self.title = title
-        self.data = data
-    }
-    
-    public var body: some View {
-        HStack {
-            Text(title)
-            
-            Spacer()
-            
-            if let data = data {
-                Text(data)
-            }
-        }
-        .font(.headline)
-    }
-}
-
 // MARK: - RemarkStyle
 
 public struct RemarkStyle: ViewModifier {
@@ -79,10 +53,10 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
             
             if let binding = isPresentingAdditionalControlView {
                 PresentationLink(isPresentingModal: binding) {
-                    DataRow(title: title, data: displayString)
+                    Row(title: title, data: displayString)
                 }
             } else {
-                DataRow(title: title, data: displayString)
+                Row(title: title, data: displayString)
             }
             
             Stepper(value: $value, step: step) {
@@ -100,7 +74,33 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
 }
 
 
-
+extension SectionStepper {
+    private struct Row: View {
+        private let title: LocalizedStringKey
+        private let data: String?
+        
+        init(
+            title: LocalizedStringKey,
+            data: String?
+        ) {
+            self.title = title
+            self.data = data
+        }
+        
+        var body: some View {
+            HStack {
+                Text(title)
+                
+                Spacer()
+                
+                if let data = data {
+                    Text(data)
+                }
+            }
+            .font(.headline)
+        }
+    }
+}
 
 
 public extension SectionStepper where Header == EmptyView {
