@@ -23,23 +23,24 @@ public extension View {
 
 // MARK: - SectionStepper
 
-public struct SectionStepper<Header>: View where Header: View {
+public struct SectionStepper<V, Header>: View where V: Strideable, Header: View {
     
     private var header: Header? = nil
     
-    
-    @Binding private var value: Double
-    private let step: Double.Stride
+    @Binding private var value: V
+    private let step: V.Stride
     private let title: LocalizedStringKey
     private let remark: LocalizedStringKey
     private let formatter: Formatter
     
-    
     private var displayString: String? {
-        
-        let formatter = DateComponentsFormatter()
-        
-        return formatter.string(from: value)
+        if let interval = value as? TimeInterval, let dateComponentsFormatter = formatter as? DateComponentsFormatter {
+            return dateComponentsFormatter.string(from: interval)
+        } else if let number = value as? NSNumber, let numberFormatter = formatter as? NumberFormatter {
+            return numberFormatter.string(from: number)
+        } else {
+            return formatter.string(for: value)
+        }
     }
     
     public var body: some View {
@@ -77,8 +78,8 @@ public extension SectionStepper where Header == EmptyView {
     init(
         title: LocalizedStringKey,
         remark: LocalizedStringKey,
-        value: Binding<Double>,
-        step: Double.Stride = 1,
+        value: Binding<V>,
+        step: V.Stride = 1,
         formatter: Formatter
     ) {
         self._value = value
@@ -98,8 +99,8 @@ public extension SectionStepper {
     init(
         title: LocalizedStringKey,
         remark: LocalizedStringKey,
-        value: Binding<Double>,
-        step: Double.Stride = 1,
+        value: Binding<V>,
+        step: V.Stride = 1,
         formatter: Formatter,
         @ViewBuilder header: () -> Header
     ) {
@@ -115,15 +116,15 @@ public extension SectionStepper {
     }
 }
 
-extension SectionStepper {
-    
-}
+
 
 
 // MARK: - SectionStepper_Previews
 
 struct SectionStepper_Previews: PreviewProvider {
-    @State static var value: TimeInterval = 60
+    @State static var duration: TimeInterval = 180
+    
+    @State static var number: Int16 = 5000
     
     static let timeDurationFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -133,13 +134,28 @@ struct SectionStepper_Previews: PreviewProvider {
         return formatter
     }()
     
+    static let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        
+        return formatter
+    }()
+    
     static var previews: some View {
         Form {
-            SectionStepper(title: "Session Duration", remark: "How long was your session?", value: $value, formatter: timeDurationFormatter, header: {
-                Text("Fighting Stats")
-            })
+            SectionStepper(
+                title: "Session Duration",
+                remark: "How long was your session?",
+                value: $duration,
+                formatter: timeDurationFormatter) {
+                    Text("Fighting Stats")
+                }
             
-            SectionStepper(title: "Session Duration", remark: "How long was your session?", value: $value, formatter: timeDurationFormatter)
+            SectionStepper(
+                title: "Total Rounds",
+                remark: "How many rounds there were in your session?",
+                value: $number,
+                formatter: numberFormatter
+            )
         }
     }
 }
