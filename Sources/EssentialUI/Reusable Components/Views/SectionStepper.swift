@@ -7,6 +7,34 @@
 
 import SwiftUI
 
+public struct DataRow: View {
+    private let title: LocalizedStringKey
+    private let data: String?
+    
+    public init(
+        title: LocalizedStringKey,
+        data: String?
+    ) {
+        self.title = title
+        self.data = data
+    }
+    
+    public var body: some View {
+        HStack {
+            Text(title)
+            
+            Spacer()
+            
+            if let data = data {
+                Text(data)
+            }
+        }
+        .font(.headline)
+    }
+}
+
+// MARK: - RemarkStyle
+
 public struct RemarkStyle: ViewModifier {
     public func body(content: Content) -> some View {
         content
@@ -45,16 +73,7 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
     
     public var body: some View {
         Section {
-            HStack {
-                Text(title)
-                
-                Spacer()
-                
-                if let string = displayString {
-                    Text(string)
-                }
-            }
-            .font(.headline)
+            DataRow(title: title, data: displayString)
             
             Stepper(value: $value, step: step) {
                 Text(remark)
