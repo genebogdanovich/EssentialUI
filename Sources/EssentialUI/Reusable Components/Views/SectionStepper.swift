@@ -30,6 +30,7 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
     private var header: Header? = nil
     
     @Binding private var value: V
+    private let bounds: ClosedRange<V>
     private let step: V.Stride
     private let title: LocalizedStringKey
     private let remark: LocalizedStringKey
@@ -59,7 +60,7 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
                 Row(title: title, data: displayString)
             }
             
-            Stepper(value: $value, step: step) {
+            Stepper(value: $value, in: bounds, step: step) {
                 Text(remark)
                     .remarkStyle()
             }
@@ -108,11 +109,13 @@ public extension SectionStepper where Header == EmptyView {
         title: LocalizedStringKey,
         remark: LocalizedStringKey,
         value: Binding<V>,
+        in bounds: ClosedRange<V>,
         step: V.Stride = 1,
         formatter: Formatter,
         isPresentingAdditionalControlView: Binding<Bool>? = nil
     ) {
         self._value = value
+        self.bounds = bounds
         self.step = step
         
         self.title = title
@@ -120,7 +123,6 @@ public extension SectionStepper where Header == EmptyView {
         
         self.formatter = formatter
         self.isPresentingAdditionalControlView = isPresentingAdditionalControlView
-        
     }
 }
 
@@ -131,12 +133,14 @@ public extension SectionStepper {
         title: LocalizedStringKey,
         remark: LocalizedStringKey,
         value: Binding<V>,
+        in bounds: ClosedRange<V>,
         step: V.Stride = 1,
         formatter: Formatter,
         isPresentingAdditionalControlView: Binding<Bool>? = nil,
         @ViewBuilder header: () -> Header
     ) {
         self._value = value
+        self.bounds = bounds
         self.step = step
         
         self.title = title
@@ -180,6 +184,7 @@ struct SectionStepper_Previews: PreviewProvider {
                 title: "Session Duration",
                 remark: "How long was your session?",
                 value: $duration,
+                in: 0...1000,
                 formatter: timeDurationFormatter) {
                     Text("Fighting Stats")
                 }
@@ -188,6 +193,7 @@ struct SectionStepper_Previews: PreviewProvider {
                 title: "Total Rounds",
                 remark: "How many rounds there were in your session?",
                 value: $number,
+                in: 0...Int16.max,
                 formatter: numberFormatter
             )
         }
