@@ -13,7 +13,11 @@ import SwiftUI
 
 public extension AVPlayerViewController {
     struct View {
-        public let player: AVPlayer
+        private let player: AVPlayer
+        
+        public init(player: AVPlayer) {
+            self.player = player
+        }
     }
 }
 
