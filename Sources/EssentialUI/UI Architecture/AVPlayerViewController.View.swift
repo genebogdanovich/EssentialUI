@@ -11,16 +11,16 @@ import SwiftUI
 
 // MARK: - AVPlayerViewController.View
 
-extension AVPlayerViewController {
+public extension AVPlayerViewController {
     struct View {
-        let player: AVPlayer
+        public let player: AVPlayer
     }
 }
 
 // MARK: - UIViewControllerRepresentable
 
 extension AVPlayerViewController.View: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> AVPlayerViewController {
+    public func makeUIViewController(context: Context) -> AVPlayerViewController {
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
         playerViewController.delegate = context.coordinator
@@ -29,9 +29,9 @@ extension AVPlayerViewController.View: UIViewControllerRepresentable {
         return playerViewController
     }
     
-    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {}
+    public func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {}
     
-    func makeCoordinator() -> some AVPlayerViewControllerDelegate {
+    public func makeCoordinator() -> some AVPlayerViewControllerDelegate {
         AVPlayerViewController.Delegate()
     }
 }
