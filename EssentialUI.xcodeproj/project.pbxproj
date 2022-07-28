@@ -51,6 +51,7 @@
 		7396A4D0283A4D1F00443856 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4CF283A4D1F00443856 /* CancelButton.swift */; };
 		7396A4D2283A4E4700443856 /* DateEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4D1283A4E4600443856 /* DateEditor.swift */; };
 		7396A4D4283A510D00443856 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396A4D3283A510D00443856 /* SettingsButton.swift */; };
+		739FA6AC289251BE00D43375 /* AVPlayerViewController.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739FA6AB289251BE00D43375 /* AVPlayerViewController.View.swift */; };
 		73A7651128429AA80063214A /* SubscribeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7651028429AA80063214A /* SubscribeButton.swift */; };
 		73AC51AA2834BBEF00188392 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */; };
 		73AC51AC2834C0C400188392 /* BottomSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */; };
@@ -114,6 +115,7 @@
 		7396A4CF283A4D1F00443856 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		7396A4D1283A4E4600443856 /* DateEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEditor.swift; sourceTree = "<group>"; };
 		7396A4D3283A510D00443856 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		739FA6AB289251BE00D43375 /* AVPlayerViewController.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerViewController.View.swift; sourceTree = "<group>"; };
 		73A7651028429AA80063214A /* SubscribeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeButton.swift; sourceTree = "<group>"; };
 		73AC51A92834BBEF00188392 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		73AC51AB2834C0C400188392 /* BottomSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModifier.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				738F8A98283BBC5100BF2A6A /* NSMutableAttributedString+.swift */,
 				738F8A9A283BBD4F00BF2A6A /* UITextView.View.swift */,
 				73750F31284DD43F0059A8DB /* UITextField.View.swift */,
+				739FA6AB289251BE00D43375 /* AVPlayerViewController.View.swift */,
 				738F8A9C283BC05800BF2A6A /* NoteEditor.swift */,
 			);
 			path = "UI Architecture";
@@ -416,6 +419,7 @@
 				73AC51B32834D16600188392 /* TextFieldAlert.swift in Sources */,
 				738F8A9B283BBD4F00BF2A6A /* UITextView.View.swift in Sources */,
 				73AC51B12834D0B000188392 /* UIAlertController+.swift in Sources */,
+				739FA6AC289251BE00D43375 /* AVPlayerViewController.View.swift in Sources */,
 				73C4372B284F7A9E0051BBC2 /* PresentationLink.swift in Sources */,
 				73122C83283F439D00001974 /* FlexibleView.swift in Sources */,
 				738CC0E4283A77550030E6C4 /* FilterMenu.swift in Sources */,
