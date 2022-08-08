@@ -12,24 +12,27 @@ import SwiftUI
 public struct FlexibleView<Data: Collection, Content: View>: View where Data.Element: Hashable {
     let data: Data
     let spacing: CGFloat
-    let alignment: HorizontalAlignment
+    let horizontalAlignment: HorizontalAlignment
+    let verticalAlignment: VerticalAlignment
     let content: (Data.Element) -> Content
     @State private var availableWidth: CGFloat = 0
     
     public init(
         data: Data,
         spacing: CGFloat,
-        alignment: HorizontalAlignment,
+        horizontalAlignment: HorizontalAlignment,
+        verticalAlignment: VerticalAlignment = .center,
         content: @escaping (Data.Element) -> Content
     ) {
         self.data = data
         self.spacing = spacing
-        self.alignment = alignment
+        self.verticalAlignment = verticalAlignment
+        self.horizontalAlignment = horizontalAlignment
         self.content = content
     }
     
     public var body: some View {
-        ZStack(alignment: Alignment(horizontal: alignment, vertical: .center)) {
+        ZStack(alignment: Alignment(horizontal: horizontalAlignment, vertical: verticalAlignment)) {
             Color.clear
                 .frame(height: 1)
                 .readSize { size in
@@ -40,7 +43,7 @@ public struct FlexibleView<Data: Collection, Content: View>: View where Data.Ele
                 availableWidth: availableWidth,
                 data: data,
                 spacing: spacing,
-                alignment: alignment,
+                horizontalAlignment: horizontalAlignment,
                 content: content
             )
         }

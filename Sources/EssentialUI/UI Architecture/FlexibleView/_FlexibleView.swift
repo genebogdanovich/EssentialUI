@@ -13,12 +13,12 @@ struct _FlexibleView<Data: Collection, Content: View>: View where Data.Element: 
     let availableWidth: CGFloat
     let data: Data
     let spacing: CGFloat
-    let alignment: HorizontalAlignment
+    let horizontalAlignment: HorizontalAlignment
     let content: (Data.Element) -> Content
     @State var elementsSize: [Data.Element: CGSize] = [:]
     
     var body : some View {
-        VStack(alignment: alignment, spacing: spacing) {
+        VStack(alignment: horizontalAlignment, spacing: spacing) {
             ForEach(computeRows(), id: \.self) { rowElements in
                 HStack(spacing: spacing) {
                     ForEach(rowElements, id: \.self) { element in
