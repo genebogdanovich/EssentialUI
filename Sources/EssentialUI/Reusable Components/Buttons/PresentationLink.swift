@@ -8,6 +8,7 @@
 import SwiftUI
 
 /// A view that looks like NavigationLink but in fact presents modal.
+@available(*, deprecated, message: "Does not work well with iOS 16 navigation.")
 public struct PresentationLink<Label: View>: View {
     
     private let label: () -> Label

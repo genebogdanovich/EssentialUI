@@ -50,12 +50,21 @@ public struct SectionStepper<V, Header>: View where V: Strideable, Header: View 
     
     public var body: some View {
         Section {
-            
-            
             if let binding = isPresentingAdditionalControlView {
-                PresentationLink(isPresentingModal: binding) {
-                    Row(title: title, data: displayString)
+                Button {
+                    binding.wrappedValue = true
+                } label: {
+                    HStack {
+                        Row(title: title, data: displayString)
+                        
+                        Spacer()
+                        
+                        Image(systemName: "chevron.right")
+                            .font(.callout.weight(.medium))
+                            .foregroundColor(Color(uiColor: .secondaryLabel))
+                    }
                 }
+                .tint(.primary)
             } else {
                 Row(title: title, data: displayString)
             }
@@ -178,6 +187,8 @@ struct SectionStepper_Previews: PreviewProvider {
         return formatter
     }()
     
+    @State static var isPresentingAdditionalControlView = false
+    
     static var previews: some View {
         Form {
             SectionStepper(
@@ -185,7 +196,8 @@ struct SectionStepper_Previews: PreviewProvider {
                 remark: "How long was your session?",
                 value: $duration,
                 in: 0...1000,
-                formatter: timeDurationFormatter) {
+                formatter: timeDurationFormatter,
+                isPresentingAdditionalControlView: $isPresentingAdditionalControlView) {
                     Text("Fighting Stats")
                 }
             
